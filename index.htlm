@@ -1,0 +1,1635 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruta INSPT: Inicios a la vida Universitaria</title>
+    <!-- Tailwind CSS para Estilos Modernos -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        inspt: {
+                            dark: '#002855',      // Azul UTN Primario
+                            blue: '#005C93',      // Azul Secundario
+                            light: '#00A4E4',     // Celeste de Acento
+                            gray: '#F8FAFC',      // Fondo claro slate-50
+                            success: '#10B981',   // Verde Éxito
+                            warning: '#F59E0B',   // Amarillo Advertencia
+                            danger: '#EF4444'     // Rojo Alerta
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts para Tipografía Académica -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F1F5F9;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #F1F5F9;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #CBD5E1;
+            border-radius: 4px;
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.4s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @media print {
+            header, footer, .no-print {
+                display: none !important;
+            }
+            .print-card {
+                border: 1px solid #002855 !important;
+                box-shadow: none !important;
+                color: black !important;
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col text-slate-800">
+
+    <!-- HEADER INSTITUCIONAL -->
+    <header class="bg-inspt-dark text-white shadow-lg border-b-4 border-inspt-light sticky top-0 z-40">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-3">
+                <!-- Isologotipo Educativo Vectorizado -->
+                <svg class="w-10 h-10 text-inspt-light" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 22V12h6v10"></path>
+                </svg>
+                <div>
+                    <h1 class="text-xl font-extrabold tracking-tight">Ruta INSPT</h1>
+                    <p class="text-xs text-slate-300 font-medium">Universidad Tecnológica Nacional (UTN)</p>
+                </div>
+            </div>
+           
+            <!-- Indicador de Progreso -->
+            <div class="flex flex-col sm:flex-row items-center gap-4 w-full md:w-auto">
+                <div class="w-full sm:w-64 bg-slate-800 rounded-full h-5 relative overflow-hidden shadow-inner border border-slate-700">
+                    <div id="global-progress" class="bg-inspt-light h-full rounded-full transition-all duration-500" style="width: 10%;"></div>
+                    <span class="absolute inset-0 flex items-center justify-center text-[10px] font-bold text-white uppercase tracking-wider" id="progress-text">Progreso: 10%</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ÁREA PRINCIPAL DE JUEGO (SECCIONES DINÁMICAS) -->
+    <main class="flex-grow max-w-5xl w-full mx-auto p-4 md:p-6 flex flex-col justify-center">
+       
+        <!-- PANTALLA 1: ONBOARDING / BIENVENIDA -->
+        <section id="sec-onboarding" class="bg-white rounded-2xl shadow-xl border border-slate-100 p-6 md:p-10 text-center max-w-2xl mx-auto transition-all duration-300 transform scale-100">
+            <span class="bg-sky-100 text-inspt-blue text-xs font-extrabold px-3 py-1.5 rounded-full uppercase tracking-widest"> Orientación para el ingreso</span>
+            <h2 class="text-3xl font-extrabold text-inspt-dark mt-4 mb-2">¡Bienvenido al INSPT-UTN!</h2>
+            <p class="text-slate-600 text-sm md:text-base leading-relaxed mb-6">
+                Te invitamos a recorrer algunos aspectos institucionales del <strong>INSPT-UTN</strong>. A través de este entorno interactivo, conocerás algunas características administrativas, las particularidades de nuestra oferta de carreras y de los reglamentos que te ayudarán en tu trayectoria académica. Sugerimos consultar la página web donde están los detalles ampliados.
+            </p>
+           
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-left mb-8">
+                <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                    <div class="w-8 h-8 rounded-lg bg-sky-100 text-inspt-blue flex items-center justify-center mb-2 font-bold">🔍</div>
+                    <h4 class="font-bold text-sm text-inspt-dark">Exploración</h4>
+                    <p class="text-xs text-slate-500 mt-1">Diferenciación de perfiles formativos de Profesorados y Tecnicaturas.</p>
+                </div>
+                <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                    <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center mb-2 font-bold">📋</div>
+                    <h4 class="font-bold text-sm text-inspt-dark">Administración</h4>
+                    <p class="text-xs text-slate-500 mt-1">Estructura del proceso de admisión presencial y virtual.</p>
+                </div>
+                <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                    <div class="w-8 h-8 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center mb-2 font-bold">⚖️</div>
+                    <h4 class="font-bold text-sm text-inspt-dark">Gobernanza</h4>
+                    <p class="text-xs text-slate-500 mt-1">Simulación de decisiones bajo el reglamento oficial vigentes.</p>
+                </div>
+            </div>
+
+            <button onclick="playConfirmSound(); changeSection('sec-level1')" class="bg-inspt-blue hover:bg-inspt-dark text-white font-bold py-3.5 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all inline-flex items-center gap-2 group transform hover:-translate-y-0.5">
+                Comenzar el Desafío
+                <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </button>
+        </section>
+
+        <!-- PANTALLA 2: NIVEL 1 - EL LABERINTO DE LAS CARRERAS -->
+        <section id="sec-level1" class="hidden bg-white rounded-2xl shadow-xl border border-slate-100 p-6 transition-all duration-300">
+            <div class="flex flex-col md:flex-row md:items-center justify-between border-b pb-4 mb-6 gap-3">
+                <div>
+                    <span class="text-xs font-bold text-inspt-blue uppercase tracking-widest">Nivel 1: Clasificación de Perfiles Profesionales</span>
+                    <h2 class="text-2xl font-black text-inspt-dark">El Laberinto de las Carreras</h2>
+                </div>
+                <div class="bg-sky-50 text-inspt-blue text-xs px-3 py-1.5 rounded-lg border border-sky-100 font-bold shrink-0">
+                    Clasificados: <span id="l1-score" class="text-sm font-black">0</span> de 5 correctos
+                </div>
+            </div>
+
+            <p class="text-sm text-slate-600 mb-6 leading-relaxed">
+                El INSPT divide su oferta educativa entre **Profesorados en Disciplinas Industriales** y **Tecnicaturas Superiores**.
+                <br>
+                <span class="text-inspt-blue font-bold">Instrucción tecno-pedagógica:</span> Evalúa detalladamente la competencia descrita en la tarjeta activa y decide si pertenece al campo pedagógico o al de aplicación puramente técnica.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
+               
+                <!-- Caja de Tarjeta Activa de Competencia -->
+                <div class="p-6 bg-slate-50 border-2 border-dashed border-slate-200 rounded-2xl flex flex-col justify-between min-h-[260px]">
+                    <div class="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Tarjeta de Competencia Activa</div>
+                    <div id="card-container" class="my-4">
+                        <!-- Tarjeta dinámica cargada vía JS -->
+                    </div>
+                    <div class="flex gap-3 justify-center">
+                        <button onclick="playClickSound(); assignCategory('Profesorado')" class="bg-inspt-blue hover:bg-inspt-dark text-white text-xs font-bold px-5 py-3 rounded-xl transition-all shadow-md flex items-center gap-2 transform hover:-translate-y-0.5">
+                            <span>🏫</span> Profesorado
+                        </button>
+                        <button onclick="playClickSound(); assignCategory('Tecnicatura')" class="bg-teal-600 hover:bg-teal-700 text-white text-xs font-bold px-5 py-3 rounded-xl transition-all shadow-md flex items-center gap-2 transform hover:-translate-y-0.5">
+                            <span>⚙️</span> Tecnicatura
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Columnas de Destino Conceptual -->
+                <div class="space-y-4 flex flex-col justify-between">
+                    <div class="p-4 rounded-xl bg-sky-50 border border-sky-100">
+                        <h4 class="font-extrabold text-inspt-blue text-sm flex items-center gap-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                            </svg>
+                            Profesorados en Disciplinas Industriales
+                        </h4>
+                        <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
+                            Formación de nivel superior de grado con alta inserción en escuelas técnicas de nivel medio y superior. Otorga sólidas herramientas pedagógicas, didácticas y metodológicas de las disciplinas.
+                        </p>
+                    </div>
+                    <div class="p-4 rounded-xl bg-teal-50 border border-teal-100">
+                        <h4 class="font-extrabold text-teal-800 text-sm flex items-center gap-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            Tecnicaturas Superiores
+                        </h4>
+                        <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
+                            Carreras cortas de inserción en el sistema productivo, industrial y de servicios corporativos. Se enfocan en el diseño de software, automatización avanzada, gestión operativa de procesos, control de seguridad e higiene industrial.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botón de avance -->
+            <div class="mt-8 flex justify-end border-t pt-4">
+                <button id="btn-next-l1" disabled onclick="playConfirmSound(); changeSection('sec-level2')" class="bg-slate-300 text-slate-500 font-bold py-3 px-6 rounded-xl cursor-not-allowed transition-all inline-flex items-center gap-2">
+                    Continuar al Nivel 2
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
+                </button>
+            </div>
+        </section>
+
+        <!-- PANTALLA 3: NIVEL 2 - LA CARRERA DE LA INSCRIPCIÓN -->
+        <section id="sec-level2" class="hidden bg-white rounded-2xl shadow-xl border border-slate-100 p-6 transition-all duration-300">
+            <div class="flex flex-col md:flex-row md:items-center justify-between border-b pb-4 mb-6 gap-3">
+                <div>
+                    <span class="text-xs font-bold text-inspt-blue uppercase tracking-widest">Nivel 2: Gestión de Procesos Administrativos</span>
+                    <h2 class="text-2xl font-black text-inspt-dark">La Carrera de la Inscripción</h2>
+                </div>
+                <span class="bg-amber-100 text-amber-800 text-xs px-3 py-1.5 rounded-lg border border-amber-200 font-bold shrink-0">
+                    Capítulo 3 del Reglamento de Ingreso
+                </span>
+            </div>
+
+            <p class="text-sm text-slate-600 mb-6 leading-relaxed">
+                Antes de sentarte formalmente en las aulas y laboratorios de nuestro campus, debes cumplimentar secuencialmente una serie de requerimientos administrativos reglamentarios obligatorios.
+                <br>
+                <span class="text-inspt-blue font-bold">Instrucción:</span> Selecciona los hitos administrativos en orden cronológico correcto (del 1 al 5) para armar tu plan de matrícula. Puedes verificar la modalidad correspondiente en el QR adjunto de la Sede Triunvirato.
+            </p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+               
+                <!-- Opciones para seleccionar (Columna izquierda) -->
+                <div class="lg:col-span-5 space-y-3">
+                    <h4 class="font-bold text-xs text-slate-500 uppercase tracking-wider mb-2">Hitos Disponibles (Ordena Secuencialmente):</h4>
+                    <div id="timeline-options" class="space-y-2">
+                        <!-- Elementos dinámicos en JS -->
+                    </div>
+                </div>
+
+                <!-- Línea de tiempo destino (Columna central) -->
+                <div class="lg:col-span-4 bg-slate-50 rounded-2xl p-5 border border-slate-200">
+                    <div class="flex justify-between items-center mb-4 border-b pb-2">
+                        <h4 class="font-extrabold text-xs text-inspt-dark uppercase tracking-wider">Camino de Inscripción:</h4>
+                        <button onclick="playClickSound(); resetTimeline()" class="text-xs text-inspt-blue hover:text-inspt-dark font-semibold hover:underline">Reiniciar orden</button>
+                    </div>
+                   
+                    <div id="timeline-slots" class="space-y-3 relative">
+                        <!-- Slots a ser llenados -->
+                    </div>
+                </div>
+
+                <!-- Tarjeta de Referencia QR Interactiva (Columna derecha) -->
+                <div class="lg:col-span-3 flex flex-col gap-4">
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl flex flex-col items-center justify-center text-center shadow-sm">
+                        <span class="text-xs font-bold text-inspt-dark mb-1">QR Oficial de Consulta</span>
+                        <p class="text-[10px] text-slate-400 mb-2 leading-tight">Acceso a la plataforma de matriculación de la sede.</p>
+                        <div class="bg-white p-2 rounded-lg border border-slate-200 shadow-inner flex items-center justify-center">
+                            <svg class="w-36 h-36" viewBox="0 0 100 100" fill="currentColor">
+                                <rect width="100" height="100" fill="white"/>
+                                <path d="M10 10h25v25h-25zm5 5v15h15v-15zm5 5h5v5h-5zm45-10h25v25h-25zm5 5v15h15v-15zm5 5h5v5h-5zm-55 45h25v25h-25zm5 5v15h15v-15zm5 5h5v5h-5zm45-5h5v5h-5zm10-10h5v10h-5zm-10 15h10v5h-10zm20-5h5v10h-5zm-10-15h5v5h-5zm15-5h5v10h-5zm-15-5h10v5h-10zm25 15h5v5h-5zm-25 10h5v5h-5zm10 0h10v5h-10zm5-15h5v5h-5zm5-10h5v5h-5z" fill="#002855"/>
+                            </svg>
+                        </div>
+                        <span class="text-[10px] font-bold text-inspt-blue mt-3 bg-sky-50 px-2 py-1 rounded border border-sky-100 uppercase tracking-wide">Triunvirato 3174, CABA</span>
+                    </div>
+                    <div class="p-3 bg-amber-50 border border-amber-200 rounded-xl">
+                        <h5 class="text-xs font-bold text-amber-800 flex items-center gap-1 mb-1">
+                            <svg class="w-4 h-4 text-amber-600 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                            </svg>
+                            Condicionalidad
+                        </h5>
+                        <p class="text-[10px] text-slate-600 leading-relaxed">
+                            No se consolidará tu condición de ingresante regular hasta que presentas la totalidad de los documentos analíticos físicos en Sede Alumnos.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Botones de avance -->
+            <div class="mt-8 flex justify-between items-center border-t pt-4">
+                <button onclick="playClickSound(); changeSection('sec-level1')" class="text-slate-500 hover:text-slate-800 text-sm font-semibold flex items-center gap-1 transition-colors">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path></svg>
+                    Regresar al Nivel 1
+                </button>
+                <button id="btn-next-l2" disabled onclick="playConfirmSound(); changeSection('sec-level-new')" class="bg-slate-300 text-slate-500 font-bold py-3 px-6 rounded-xl cursor-not-allowed transition-all inline-flex items-center gap-2">
+                    Continuar al Nivel 3
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
+                </button>
+            </div>
+        </section>
+
+        <!-- PANTALLA 4: NIVEL 3 - EL CONSULTORIO DE ADMISIONES (MITOS VS. REALIDADES) -->
+        <section id="sec-level-new" class="hidden bg-white rounded-2xl shadow-xl border border-slate-100 p-6 transition-all duration-300">
+            <div class="flex flex-col md:flex-row md:items-center justify-between border-b pb-4 mb-6 gap-3">
+                <div>
+                    <span class="text-xs font-bold text-inspt-blue uppercase tracking-widest">Nivel 3: Validación de Reglas de Admisión</span>
+                    <h2 class="text-2xl font-black text-inspt-dark">El Consultorio de Admisiones</h2>
+                </div>
+                <div class="bg-indigo-50 text-indigo-700 text-xs px-3 py-1.5 rounded-lg border border-indigo-100 font-bold shrink-0">
+                    Aciertos: <span id="lnew-score" class="text-sm font-black">0</span> de 9 correctos
+                </div>
+            </div>
+
+            <p class="text-sm text-slate-600 mb-6 leading-relaxed">
+                Existen múltiples presupuestos e interpretaciones erróneas por parte de los postulantes respecto de las normativas de ingreso. Como Asesor del Departamento de Alumnos, debes evaluar las siguientes declaraciones de los aspirantes y dictaminar si corresponden a un **Mito (Falso)** o a una **Realidad (Verdadero)**.
+            </p>
+
+            <!-- Contenedor del Desafío de Reglas -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+                <!-- Tarjeta Interactiva de Auditoría (Centro) -->
+                <div class="lg:col-span-8 p-6 bg-slate-50 border border-slate-200 rounded-2xl flex flex-col justify-between min-h-[300px]">
+                    <div>
+                        <div class="flex items-center justify-between border-b pb-3 mb-4">
+                            <span class="text-[10px] uppercase font-bold text-indigo-600 tracking-wider block" id="lnew-progress-text">Caso 1 de 9</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-[9px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">Mesa de Ayuda</span>
+                        </div>
+                        <h4 class="text-xs font-extrabold text-slate-400 uppercase tracking-wider mb-2">Declaración del Aspirante:</h4>
+                        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm relative min-h-[120px] flex items-center">
+                            <span class="absolute top-2 left-2 text-slate-200 text-4xl select-none font-serif leading-none">“</span>
+                            <p class="text-xs md:text-sm text-slate-700 font-semibold italic pl-6 pr-4 leading-relaxed" id="lnew-question-text">
+                                <!-- Se carga dinámicamente -->
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4 mt-6 justify-center">
+                        <button onclick="playClickSound(); submitLevelNewAnswer(false)" class="bg-rose-50 hover:bg-rose-100 text-rose-700 border border-rose-200 text-xs font-extrabold px-6 py-3 rounded-xl transition-all shadow-sm flex items-center gap-2 transform hover:-translate-y-0.5 w-full sm:w-auto justify-center">
+                            <svg class="w-4 h-4 text-rose-600" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                            Es un Mito (Falso)
+                        </button>
+                        <button onclick="playClickSound(); submitLevelNewAnswer(true)" class="bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-200 text-xs font-extrabold px-6 py-3 rounded-xl transition-all shadow-sm flex items-center gap-2 transform hover:-translate-y-0.5 w-full sm:w-auto justify-center">
+                            <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Es una Realidad (Verdadero)
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tarjeta Lateral de Consultas Normativas -->
+                <div class="lg:col-span-4 bg-slate-50 border border-slate-200 rounded-2xl p-5 flex flex-col justify-between">
+                    <div>
+                        <h4 class="font-extrabold text-xs text-slate-800 uppercase tracking-wider mb-3 flex items-center gap-1.5">
+                            <svg class="w-4 h-4 text-indigo-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                            </svg>
+                            Sede de Gestión Alumnos
+                        </h4>
+                        <p class="text-[11px] text-slate-600 leading-relaxed mb-4">
+                            Los procesos y especificaciones de ingreso presencial y no arancelado se asientan exclusivamente en el Departamento de Alumnos y el Reglamento de Admisión Oficial.
+                        </p>
+                        <div class="space-y-2 border-t pt-3">
+                            <div class="flex items-center gap-2 text-[10px] text-slate-500 font-bold">
+                                <span>📍</span> Sede: Triunvirato 3174, CABA
+                            </div>
+                            <div class="flex items-center gap-2 text-[10px] text-slate-500 font-bold">
+                                <span>⏰</span> Horario: Lunes a Viernes de 9 a 20 hs
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-indigo-50 border border-indigo-100 p-3.5 rounded-xl mt-4">
+                        <span class="text-[10px] font-black uppercase text-indigo-800 block mb-1">Dato Clave de Articulación:</span>
+                        <p class="text-[10px] text-slate-600 leading-relaxed">
+                            Las vacantes para el ciclo de nivelación presencial son limitadas y quedan estrictamente supeditadas a la disponibilidad efectiva de cada carrera.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botones de Navegación del Nivel -->
+            <div class="mt-8 flex justify-between items-center border-t pt-4">
+                <button onclick="playClickSound(); changeSection('sec-level2')" class="text-slate-500 hover:text-slate-800 text-sm font-semibold flex items-center gap-1 transition-colors">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path></svg>
+                    Regresar al Nivel 2
+                </button>
+                <button id="btn-next-lnew" disabled onclick="playConfirmSound(); changeSection('sec-level3')" class="bg-slate-300 text-slate-500 font-bold py-3 px-6 rounded-xl cursor-not-allowed transition-all inline-flex items-center gap-2">
+                    Continuar al Nivel 4
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
+                </button>
+            </div>
+        </section>
+
+        <!-- PANTALLA 5: NIVEL 4 (EX-NIVEL 3) - EL SIMULADOR DE CURSADA Y APROBACIÓN -->
+        <section id="sec-level3" class="hidden bg-white rounded-2xl shadow-xl border border-slate-100 p-6 transition-all duration-300">
+            <div class="flex flex-col md:flex-row md:items-center justify-between border-b pb-4 mb-6 gap-3">
+                <div>
+                    <span class="text-xs font-bold text-inspt-blue uppercase tracking-widest">Nivel 4: Toma de Decisiones Reglamentarias</span>
+                    <h2 class="text-2xl font-black text-inspt-dark">Simulador de Cursada y Aprobación</h2>
+                </div>
+                <span class="bg-emerald-100 text-emerald-800 text-xs px-3 py-1.5 rounded-lg border border-emerald-200 font-bold shrink-0">
+                    Disposiciones del Reglamento General
+                </span>
+            </div>
+
+            <p class="text-sm text-slate-600 mb-6 leading-relaxed">
+                El andamiaje de la simulación te presenta dilemas frecuentes del estudiante. Tus decisiones sobre el cumplimiento de asistencia, procesos de evaluación definirán tu regularidad.
+            </p>
+
+            <!-- Contenedor del Simulador (Novela Visual / Escenarios) -->
+            <div class="bg-slate-50 border border-slate-200 rounded-2xl overflow-hidden shadow-inner flex flex-col md:flex-row">
+                <!-- Avatar / Ilustración de personaje ficticio -->
+                <div class="bg-inspt-dark p-6 flex flex-col justify-center items-center text-white md:w-1/3 text-center gap-3">
+                    <div class="w-20 h-20 bg-gradient-to-tr from-inspt-blue to-inspt-light rounded-full flex items-center justify-center text-4xl shadow-md border-4 border-white/20 select-none" id="case-avatar-icon">
+                        🎓
+                    </div>
+                    <div>
+                        <h4 id="case-avatar-name" class="font-extrabold text-lg">Agustín</h4>
+                        <p class="text-[10px] uppercase text-inspt-light font-extrabold tracking-wider" id="case-avatar-role">Aspirante Universitario</p>
+                    </div>
+                    <div class="text-xs text-slate-300 italic border-t border-white/10 pt-2 w-full" id="case-avatar-footer">
+                        Régimen de cursado de grado
+                    </div>
+                </div>
+
+                <!-- Cuerpo del dilema -->
+                <div class="p-6 md:w-2/3 flex flex-col justify-between min-h-[300px]">
+                    <div>
+                        <div class="text-xs font-bold text-inspt-blue uppercase tracking-widest mb-1" id="case-chapter-title">Régimen Lectivo</div>
+                        <h3 class="font-black text-lg text-inspt-dark mb-3" id="case-title">Carga horaria y vida laboral</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed mb-6" id="case-description">
+                            Agustín está trabajando en una empresa de automatización industrial y ha tenido horas extras que le impiden cursar en el mismo turno asignado originalmente. ¿Qué contempla el reglamento del INSPT al respecto?
+                        </p>
+                    </div>
+
+                    <!-- Botones de Opciones de Decisión -->
+                    <div id="case-options" class="space-y-3">
+                        <!-- Dinámico vía JS -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navegación interna -->
+            <div class="mt-8 flex justify-between items-center border-t pt-4">
+                <button onclick="playClickSound(); changeSection('sec-level-new')" class="text-slate-500 hover:text-slate-800 text-sm font-semibold flex items-center gap-1 transition-colors">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path></svg>
+                    Regresar al Nivel 3
+                </button>
+                <button id="btn-next-l3" disabled onclick="playConfirmSound(); changeSection('sec-level5')" class="bg-slate-300 text-slate-500 font-bold py-3 px-6 rounded-xl cursor-not-allowed transition-all inline-flex items-center gap-2">
+                    Continuar al Nivel 5
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
+                </button>
+            </div>
+        </section>
+
+        <!-- NUEVA PANTALLA: NIVEL 5 - REGULARIDAD Y PERMANENCIA ACADÉMICA -->
+        <section id="sec-level5" class="hidden bg-white rounded-2xl shadow-xl border border-slate-100 p-6 transition-all duration-300">
+            <div class="flex flex-col md:flex-row md:items-center justify-between border-b pb-4 mb-6 gap-3">
+                <div>
+                    <span class="text-xs font-bold text-inspt-blue uppercase tracking-widest">Nivel 5: Régimen Académico y Regularidad</span>
+                    <h2 class="text-2xl font-black text-inspt-dark">El Tablero de Control Académico</h2>
+                </div>
+                <div class="bg-teal-50 text-teal-700 text-xs px-3 py-1.5 rounded-lg border border-teal-100 font-bold shrink-0">
+                    Auditado: <span id="l5-progress-counter" class="text-sm font-black">0</span> de 7 pautas
+                </div>
+            </div>
+
+            <p class="text-sm text-slate-600 mb-6 leading-relaxed">
+                Como alumno regular de la UTN-INSPT, debes gobernar con precisión los mecanismos de cursado, asistencia, acreditaciones especiales e inscripciones a exámenes finales para asegurar tu permanencia sin contratiempos.
+            </p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+                <!-- Panel Central de Auditoría de Caso -->
+                <div class="lg:col-span-8 p-6 bg-slate-50 border border-slate-200 rounded-2xl flex flex-col justify-between min-h-[320px]">
+                    <div>
+                        <div class="flex items-center justify-between border-b pb-3 mb-4">
+                            <span class="text-[10px] uppercase font-bold text-teal-600 tracking-wider block" id="l5-progress-text">Caso de Estudio 1 de 7</span>
+                            <span class="bg-teal-100 text-teal-800 text-[9px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">Reglamento General</span>
+                        </div>
+                        <h4 class="text-xs font-extrabold text-slate-400 uppercase tracking-wider mb-2" id="l5-question-category">Inscripción y Permanencia:</h4>
+                        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm min-h-[100px] flex items-center">
+                            <p class="text-xs md:text-sm text-slate-700 font-semibold pl-2 pr-2 leading-relaxed" id="l5-question-text">
+                                <!-- Se carga dinámicamente -->
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-2 mt-6" id="l5-options-container">
+                        <!-- Botones dinámicos de opciones -->
+                    </div>
+                </div>
+
+                <!-- Resumen de Directivas y Normas de Sede -->
+                <div class="lg:col-span-4 bg-slate-50 border border-slate-200 rounded-2xl p-5 flex flex-col justify-between">
+                    <div>
+                        <h4 class="font-extrabold text-xs text-slate-800 uppercase tracking-wider mb-3 flex items-center gap-1.5">
+                            <svg class="w-4 h-4 text-teal-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                            </svg>
+                            Permanencia Académica
+                        </h4>
+                        <p class="text-[11px] text-slate-600 leading-relaxed mb-4">
+                            Los procesos de regularidad y acreditaciones dependen del calendario académico oficial y las disposiciones reglamentarias vigentes del INSPT.
+                        </p>
+                        <div class="space-y-2 border-t pt-3">
+                            <a href="https://inspt.utn.edu.ar/bienestar-estudiantil/" target="_blank" class="flex items-center gap-2 text-[10px] text-teal-700 hover:text-teal-900 font-bold transition-colors">
+                                <span>📅</span> Enlace: Calendario Académico Oficial
+                            </a>
+                            <div class="flex items-center gap-2 text-[10px] text-slate-500 font-bold">
+                                <span>🏢</span> Depto. de Alumnos: Sede Triunvirato
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-teal-50 border border-teal-100 p-3.5 rounded-xl mt-4">
+                        <span class="text-[10px] font-black uppercase text-teal-800 block mb-1">Dato Clave de Permanencia:</span>
+                        <p class="text-[10px] text-slate-600 leading-relaxed">
+                            No pierdas de vista los requerimientos del 75% de asistencia. El sistema de cómputos opera de manera independiente por materia.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botones de Navegación del Nivel 5 -->
+            <div class="mt-8 flex justify-between items-center border-t pt-4">
+                <button onclick="playClickSound(); changeSection('sec-level3')" class="text-slate-500 hover:text-slate-800 text-sm font-semibold flex items-center gap-1 transition-colors">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path></svg>
+                    Regresar al Nivel 4
+                </button>
+                <button id="btn-next-l5" disabled onclick="playConfirmSound(); changeSection('sec-fin')" class="bg-slate-300 text-slate-500 font-bold py-3 px-6 rounded-xl cursor-not-allowed transition-all inline-flex items-center gap-2">
+                    Finalizar Ruta Académica
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
+                </button>
+            </div>
+        </section>
+
+        <!-- PANTALLA 6: PÁGINA FINAL DE SÍNTESIS / COMPROBANTE -->
+        <section id="sec-fin" class="hidden bg-white rounded-2xl shadow-xl border border-slate-100 p-6 md:p-10 text-center max-w-3xl mx-auto transition-all duration-300">
+            <div class="no-print">
+                <span class="bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-widest">Acreditación Académica Completada</span>
+                <h2 class="text-3xl font-black text-inspt-dark mt-4 mb-2">¡Felicitaciones, ingresante de la UTN-INSPT!</h2>
+                <p class="text-slate-600 text-sm md:text-base leading-relaxed mb-6 max-w-xl mx-auto">
+                    Te invitamos a recorrer los reglamentos y página web para conocer en más detalle la normativa del INSPT.
+                </p>
+            </div>
+
+            <!-- Pasaporte Académico del Ingresante (Certificado Imprimible) -->
+            <div class="print-card bg-gradient-to-br from-inspt-dark to-slate-900 text-white rounded-3xl p-6 md:p-8 text-left shadow-2xl border border-slate-700 max-w-xl mx-auto mb-8 relative overflow-hidden">
+                <!-- Marca de Agua decorativa -->
+                <div class="absolute right-[-30px] bottom-[-30px] opacity-10 text-9xl font-black select-none pointer-events-none">
+                    UTN
+                </div>
+                <div class="flex justify-between items-start border-b border-white/20 pb-4 mb-6">
+                    <div>
+                        <h4 class="text-lg font-black tracking-wider text-white">PASAPORTE DEL INGRESANTE</h4>
+                        <p class="text-[10px] text-inspt-light font-extrabold uppercase tracking-widest">Instituto Nacional Superior del Profesorado Técnico</p>
+                    </div>
+                    <!-- Icono Escudo SVG -->
+                    <svg class="w-8 h-8 text-inspt-light shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                    </svg>
+                </div>
+               
+                <div class="grid grid-cols-2 gap-y-4 gap-x-6 text-xs mb-6">
+                    <div>
+                        <span class="text-slate-400 block uppercase font-bold tracking-wider text-[9px]">Destinatario</span>
+                        <span class="font-bold text-sm text-white">Aspirante al INSPT</span>
+                    </div>
+                    <div>
+                        <span class="text-slate-400 block uppercase font-bold tracking-wider text-[9px]">Institución</span>
+                        <span class="font-bold text-sm text-white">Universidad Tecnológica Nacional</span>
+                    </div>
+                    <div>
+                        <span class="text-slate-400 block uppercase font-bold tracking-wider text-[9px]">Capacidad</span>
+                        <span class="font-bold text-sm text-inspt-light">Diagnóstico sobre Normativa Académica</span>
+                    </div>
+                    <div>
+                        <span class="text-slate-400 block uppercase font-bold tracking-wider text-[9px]">Estatus</span>
+                        <span class="font-bold text-sm text-emerald-400 flex items-center gap-1">
+                            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                            Preinscripción Validada
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Enlaces Claves Recomendados -->
+                <div class="border-t border-white/20 pt-4 space-y-3">
+                    <h5 class="text-[10px] font-black uppercase tracking-wider text-inspt-light">Importante: consulta Accesos Oficiales:</h5>
+                    <div class="flex flex-wrap gap-2 text-[10px] no-print">
+                        <a href="https://inspt.utn.edu.ar/inscripcion-a-carreras/" target="_blank" class="bg-white/10 hover:bg-white/20 px-3 py-1.5 rounded-lg transition-all flex items-center gap-1 border border-white/5">
+                            <span>🔗</span> Detalles de Inscripción (documentación/Ingreso/Fechas)
+                        </a>
+                        <a href="https://inspt.utn.edu.ar/wp-content/uploads/2026/02/Reglamento-Tecnicaturas-Dispo-665_2024.pdf" target="_blank" class="bg-white/10 hover:bg-white/20 px-3 py-1.5 rounded-lg transition-all flex items-center gap-1 border border-white/5">
+                            <span>📄</span> Reglamento Tecnicaturas (PDF)
+                        </a>
+                        <a href="https://inspt.utn.edu.ar/wp-content/uploads/2025/02/Reglamento_Carreras-de-Grado.pdf" target="_blank" class="bg-white/10 hover:bg-white/20 px-3 py-1.5 rounded-lg transition-all flex items-center gap-1 border border-white/5">
+                            <span>📄</span> Reglamento Profesorados
+                        </a>
+                        <a href="https://inspt.utn.edu.ar/carreras/" target="_blank" class="bg-white/10 hover:bg-white/20 px-3 py-1.5 rounded-lg transition-all flex items-center gap-1 border border-white/5">
+                            <span>🎓</span> Planes de las Carreras
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botones de Acción Posterior -->
+            <div class="no-print flex flex-col sm:flex-row justify-center items-center gap-4">
+                <button onclick="window.print()" class="bg-slate-800 hover:bg-slate-700 text-white font-bold py-3 px-6 rounded-xl transition-all inline-flex items-center gap-2 text-sm shadow-md">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+                    Imprimir Comprobante
+                </button>
+                <button onclick="playConfirmSound(); resetGame()" class="bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold py-3 px-6 rounded-xl transition-all inline-flex items-center gap-2 text-sm shadow-sm border border-slate-300">
+                    Reiniciar Simulación
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.21 7.89H18"></path></svg>
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER INSTITUCIONAL -->
+    <footer class="bg-slate-900 text-slate-400 text-xs py-5 text-center border-t border-slate-800 no-print">
+        <div class="max-w-6xl mx-auto px-4">
+            <p>&copy; 2026 - Instituto Nacional Superior del Profesorado Técnico (INSPT - UTN).</p>
+            <p class="mt-1 text-slate-500 font-medium">Tecnologías Digitales Aplicadas a la Articulación de Ingreso INSPT • Gestión y Currícula.</p>
+        </div>
+    </footer>
+
+    <!-- MODAL DE RETROALIMENTACIÓN FORMATIVA -->
+    <div id="feedback-modal" class="fixed inset-0 bg-slate-900/70 flex items-center justify-center p-4 z-50 opacity-0 pointer-events-none transition-all duration-350 ease-out">
+        <div class="bg-white rounded-2xl max-w-lg w-full shadow-2xl overflow-hidden transform scale-95 transition-all duration-300" id="feedback-content-box">
+           
+            <!-- Encabezado / Iconografía del Modal -->
+            <div id="modal-header-bg" class="bg-inspt-blue p-4 flex justify-between items-center text-white">
+                <h3 class="font-bold text-base flex items-center gap-2" id="modal-header-title">
+                    <span>💡</span> Retroalimentación Académica
+                </h3>
+                <button onclick="playClickSound(); closeModal()" class="text-white/80 hover:text-white font-extrabold text-2xl transition-colors">&times;</button>
+            </div>
+           
+            <!-- Cuerpo del Modal -->
+            <div class="p-6">
+                <!-- Estado Visual -->
+                <div class="flex items-center gap-4 mb-4">
+                    <div id="modal-status-badge-container" class="w-12 h-12 rounded-full flex items-center justify-center text-3xl shadow-inner bg-slate-100">
+                        <span id="modal-status-icon">🎉</span>
+                    </div>
+                    <div>
+                        <span id="modal-status-badge" class="bg-emerald-100 text-emerald-800 text-[10px] font-extrabold px-2.5 py-1 rounded-md uppercase tracking-wider border border-emerald-200">Correcto</span>
+                        <h4 id="modal-status-title" class="font-extrabold text-slate-800 text-base mt-1">¡Análisis correcto de perfiles!</h4>
+                    </div>
+                </div>
+
+                <!-- Explicación Didáctica -->
+                <div id="modal-explanation-box" class="bg-slate-50 p-4 rounded-xl border border-slate-200 mb-6">
+                    <p id="modal-explanation" class="text-slate-600 text-xs md:text-sm leading-relaxed custom-scrollbar max-h-[160px] overflow-y-auto">
+                        La escala del analítico intermedio provisto por la escuela garantiza la viabilidad de la inserción temporaria contemplada en la Libreta de Estudios reglamentaria.
+                    </p>
+                </div>
+
+                <!-- Acción del Modal -->
+                <button onclick="playClickSound(); closeModal()" id="modal-action-btn" class="w-full bg-inspt-blue hover:bg-inspt-dark text-white font-bold py-3 rounded-xl text-xs uppercase tracking-widest transition-all shadow-md transform hover:-translate-y-0.5">
+                    Entendido, Continuar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- LOGICA DEL JUEGO (JAVASCRIPT) -->
+    <script>
+        const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+        let audioCtx = null;
+
+        function initAudio() {
+            if (!audioCtx) {
+                audioCtx = new AudioContextClass();
+            }
+        }
+
+        function playClickSound() {
+            try {
+                initAudio();
+                if (!audioCtx) return;
+                let osc = audioCtx.createOscillator();
+                let gain = audioCtx.createGain();
+                osc.type = 'triangle';
+                osc.frequency.setValueAtTime(450, audioCtx.currentTime);
+                osc.frequency.exponentialRampToValueAtTime(150, audioCtx.currentTime + 0.1);
+                gain.gain.setValueAtTime(0.08, audioCtx.currentTime);
+                gain.gain.linearRampToValueAtTime(0.01, audioCtx.currentTime + 0.1);
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+                osc.start();
+                osc.stop(audioCtx.currentTime + 0.1);
+            } catch (e) {}
+        }
+
+        function playConfirmSound() {
+            try {
+                initAudio();
+                if (!audioCtx) return;
+                let osc = audioCtx.createOscillator();
+                let gain = audioCtx.createGain();
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(523.25, audioCtx.currentTime); // C5
+                osc.frequency.setValueAtTime(659.25, audioCtx.currentTime + 0.08); // E5
+                osc.frequency.setValueAtTime(783.99, audioCtx.currentTime + 0.16); // G5
+                gain.gain.setValueAtTime(0.12, audioCtx.currentTime);
+                gain.gain.linearRampToValueAtTime(0.01, audioCtx.currentTime + 0.35);
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+                osc.start();
+                osc.stop(audioCtx.currentTime + 0.35);
+            } catch (e) {}
+        }
+
+        function playSuccessSound() {
+            try {
+                initAudio();
+                if (!audioCtx) return;
+                let osc = audioCtx.createOscillator();
+                let gain = audioCtx.createGain();
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(587.33, audioCtx.currentTime); // D5
+                osc.frequency.exponentialRampToValueAtTime(880, audioCtx.currentTime + 0.15); // A5
+                gain.gain.setValueAtTime(0.1, audioCtx.currentTime);
+                gain.gain.linearRampToValueAtTime(0.01, audioCtx.currentTime + 0.3);
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+                osc.start();
+                osc.stop(audioCtx.currentTime + 0.3);
+            } catch (e) {}
+        }
+
+        function playFailureSound() {
+            try {
+                initAudio();
+                if (!audioCtx) return;
+                let osc = audioCtx.createOscillator();
+                let gain = audioCtx.createGain();
+                osc.type = 'sawtooth';
+                osc.frequency.setValueAtTime(180, audioCtx.currentTime);
+                osc.frequency.setValueAtTime(120, audioCtx.currentTime + 0.12);
+                gain.gain.setValueAtTime(0.1, audioCtx.currentTime);
+                gain.gain.linearRampToValueAtTime(0.01, audioCtx.currentTime + 0.25);
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+                osc.start();
+                osc.stop(audioCtx.currentTime + 0.25);
+            } catch (e) {}
+        }
+
+        // ESTADO GLOBAL DE LA APP
+        let gameState = {
+            progress: 10,
+            level1: {
+                currentIdx: 0,
+                correctCount: 0,
+                isCompleted: false,
+                bank: [
+                    {
+                        text: "Forma profesionales con competencias para planificar, conducir y evaluar el proceso de enseñanza y aprendizaje en nivel secundario y superior.",
+                        category: "Profesorado",
+                        title: "Profesorado en Disciplinas Industriales",
+                        feedback: "¡Excelente! Los Profesorados del INSPT se distinguen por amalgamar la didáctica académica avanzada, preparando al docente de escuelas y de nivel superior superior."
+                    },
+                    {
+                        text: "Forma expertos capacitados para optimizar el rendimiento y ergonomía en plantas industriales, estimar costos integrales de fabricación, auditar procesos de manufactura automatizada e implementar planes de mejora bajo normas de calidad internacionales.",
+                        category: "Tecnicatura",
+                        title: "Tecnicatura",
+                        feedback: "¡Excelente! Las Tecnicaturas Superiores del INSPT orientan su currícula de manera estricta y aplicada a la inserción directa en cargos operativos, logísticos y de manufactura de alta complejidad."
+                    },
+                    {
+                        text: "Capacita profesionales para la organización de laboratorios en disciplinas técnicas.",
+                        category: "Tecnicatura",
+                        title: "Tecnicatura",
+                        feedback: "¡Muy bien clasificado! Estos trayectos articulan el rigor experimental de los laboratorios con las matrices teóricas de la enseñanza contemporánea."
+                    },
+                    {
+                        text: "Forma profesionales para acompañar programas de prevención de riesgos en empresas, evaluar impacto de contaminantes físico-químicos en plantas industriales.",
+                        category: "Tecnicatura",
+                        title: "Tecnicatura",
+                        feedback: "¡Perfecto!."
+                    },
+                    {
+                        text: "Forma expertos en la diagramación de arquitecturas de bases de datos, administración de sistemas operativos de red, diseño de algoritmos interactivos y gestión de plataformas de software para corporaciones tecnológicas.",
+                        category: "Tecnicatura",
+                        title: "Tecnicatura en Informática Aplicada",
+                        feedback: "¡Impecable! A diferencia del trayecto de computación docente, este técnico se focaliza íntegramente en las capas de desarrollo  asociadas a los mercados de software e IT."
+                    }
+                ]
+            },
+            level2: {
+                isCompleted: false,
+                correctSequence: [
+                    "h-1", // Preinscripción web
+                    "h-2", // Presentación de documentación
+                    "h-3", // Reserva de vacante
+                    "h-4", // Ingreso
+                    "h-5"  // Restricciones académicas
+                ],
+                userSequence: [],
+                allHitos: {
+                    "h-1": {
+                        text: "1. Preinscripción Web Obligatoria",
+                        desc: "Completar el formulario digital único de postulación en la plataforma del INSPT-UTN."
+                    },
+                    "h-2": {
+                        text: "2. Carpeta de Documentos Física",
+                        desc: "Presentar presencialmente en Sede Triunvirato: DNI original/copia, Título Secundario Legalizado (o constancia), Partida, Fotos 4x4 y constancia de CUIL en los periodos establecidos."
+                    },
+                    "h-3": {
+                        text: "3. Confirmación de Vacante para Nivelación",
+                        desc: "Frente a la presentación de tu documentación en Dpto. Alumnos, la vacante queda formalmente confirmada para iniciar el curso/seminario/taller de ingreso atendiendo a las vacantes disponibles."
+                    },
+                    "h-4": {
+                        text: "4. Ingreso",
+                        desc: "Cursar e Taller, Curso o Seminario según cada carrera, con asistencia obligatoria, no inferior al 75%. Consultar en la página web el tipo de ingreso por carrera https://inspt.utn.edu.ar/inscripcion-a-carreras/"
+                    },
+                    "h-5": {
+                        text: "5. Analítico Secundario",
+                        desc: "Dar cumplimiento a la presentación del título secundario pendiente en los plazos establecidos. El legajo incompleto no permite la aprobación de materias de la carrera."
+                    }
+                }
+            },
+            levelNew: {
+                currentIdx: 0,
+                correctCount: 0,
+                isCompleted: false,
+                questions: [
+                    {
+                        statement: "“Como ya completé mi formulario de preinscripción en la página web oficial, he terminado de manera definitiva mi trámite de inscripción institucional y mi banco está asegurado.”",
+                        isTrue: false,
+                        feedback: "¡Excelente! El trámite de inscripción no termina con la preinscripción web. El aspirante debe completar el formulario de preinscripción online que es solo el primer paso. El trámite exige presentar la documentación de forma física en el Departamento de Alumnos."
+                    },
+                    {
+                        statement: "“Haber completado exitosamente la carga del formulario digital en línea no me reserva una vacante automática para las instancias evaluativas de nivelación.”",
+                        isTrue: true,
+                        feedback: "¡Correcto! La reserva de vacante no es automática. Un error común es creer que anotarse en la web garantiza la vacante. El aspirante debe saber que la vacante para realizar el curso, taller o seminario de ingreso queda reservada exclusivamente frente a la presentación de la documentación y, además, está supeditada a la disponibilidad de la carrera."
+                    },
+                    {
+                        statement: "“Los aspirantes a Tecnicatura de Informática, Química y Física y Profesorado de matemática deben realizar un seminario de ingreso. Los aspirantes al profesorado de inglés deben realizar un curso de ingreso. Los aspirantes a Tecnicaturas de Control Eléctrico, Mecánica, Robótica, Electrónica y Diseño deben realizar talleres de ingreso. El Profesorado en Docencia Superior no requiere de ingreso obligatorio.”",
+                        isTrue: true,
+                        feedback: "¡Correcto! Los aspirantes a Tecnicatura de Informática, Química y Física y Profesorado de matemática deben realizar un seminario de ingreso. Los aspirantes al profesorado de inglés deben realizar un curso de ingreso. Los aspirantes a Tecnicaturas de Control Eléctrico, Mecánica, Robótica, Electrónica y Diseño deben realizar talleres de ingreso. El Profesorado en Docencia Superior no requiere de ingreso obligatorio."
+                    },
+                    {
+                        statement: "“Dado que los profesorados y tecnicaturas que dicta el INSPT son carreras de carácter no arancelado, las asistencias a los cursos, talleres o seminarios de ingreso son totalmente opcionales.”",
+                        isTrue: false,
+                        feedback: "¡Correcto, es un mito! Exigencia de asistencia al curso/seminario/talleres de ingreso: El aspirante debe comprometerse con la cursada. Al ser carreras presenciales (y no aranceladas), el sistema exige obligatoriamente un 75% de asistencia para ser considerado alumno regular."
+                    },
+                    {
+                        statement: "“Si aspiro al Profesorado en Docencia Superior, los requisitos documentales son exactamente iguales a los de las tecnicaturas, bastándome presentar copia de mi título secundario.”",
+                        isTrue: false,
+                        feedback: "¡Excelente detección de casos especiales! Presentación de documentación: Los aspirantes deben presentar: Título secundario original legalizado (y fotocopia), DNI, Partida de nacimiento, 3 fotos 4x4 y fotocopia de constancia de CUIL. Caso especial: Quienes aspiren al Profesorado en Docencia Superior tienen que cumplir un requisito mayor: poseer un título de Educación Superior de al menos 1.800 horas reloj y dos años y medio de duración, presentando el plan de estudios correspondiente."
+                    },
+                    {
+                        statement: "“Si presento mi constancia de analítico secundario en trámite o indico que adeudo materias del secundario, podré cursar e igualmente aprobar formalmente las asignaturas del primer cuatrimestre.”",
+                        isTrue: false,
+                        feedback: "¡Correcto, es un gran mito! Restricción académica por falta de título definitivo: Es vital advertir a quienes ingresan con 'Constancia de título en trámite', 'Alumno regular' o 'Materias adeudadas' que no podrán aprobar asignaturas de la carrera hasta que no entregue el título y cumpla todas las condiciones reglamentarias."
+                    },
+                    {
+                        statement: "“Si por motivos personales no logro acercar mi carpeta física a Sede Triunvirato en el primer período (3/8/2026 al 11/12/2026), puedo presentarla sin excepción alguna en el segundo período (25/01/2027 al 25/02/2027), asegurando la misma disponibilidad de vacantes.”",
+                        isTrue: false,
+                        feedback: "¡Magnífico análisis reglamentario! El aspirante debe organizarse para asistir a la sede únicamente dentro de las fechas habilitadas. Si pierde el primer período, solo le quedará el segundo período (25/01/2027 al 25/02/2027). Además, las vacantes quedan supeditadas a la disponibilidad de cada carrera. (Aclaración administrativa: Los únicos exceptuados de realizar este proceso son aquellos alumnos que ya hayan completado la entrega de documentación en años anteriores; ellos solo deben comunicarse por correo electrónico)."
+                    },
+                    {
+                        statement: "“Si ya tengo estudios previos, puedo solicitar mi ingreso directo por equivalencia sin necesidad de realizar el taller, curso o seminario ordinario, siempre que cumpla con los requisitos particulares de los cuadernillos de ingreso correspondientes.”",
+                        isTrue: true,
+                        feedback: "¡Correcto! El aspirante puede solicitar el ingreso por equivalencia dando cumplimiento a los requisitos expuestos en los cuadernillos de ingreso (los cuales se pueden consultar en la página web oficial https://inspt.utn.edu.ar/inscripcion-a-carreras/ , seleccionando la carrera y el apartado 'Tipo de ingreso')."
+                    },
+                    {
+                        statement: "“Al presentar una solicitud para que me reconozcan equivalencias de materias aprobadas en otra institución de educación superior reconocida dentro de los plazos reglamentarios, puedo dejar de asistir a clases de inmediato sin esperar el dictamen formal.”",
+                        isTrue: false,
+                        feedback: "¡Mito detectado! El aspirante puede presentar la solicitud de equivalencias de asignaturas aprobadas en Instituciones de Educación Superior oficialmente reconocidas dentro de los plazos establecidos por el calendario académico (disponible en https://inspt.utn.edu.ar/bienestar-estudiantil/ ). Sin embargo, hasta que no se disponga del dictamen formal aprobatorio, el alumno tiene la obligatoriedad de cursar la materia solicitada."
+                    }
+                ]
+            },
+            level3: {
+                currentIdx: 0,
+                isCompleted: false,
+                scenarios: [
+                    {
+                        avatarName: "Agustín",
+                        avatarIcon: "⚙️",
+                        avatarRole: "Estudiante",
+                        avatarFooter: "Reglamento",
+                        chapterTitle: "Régimen Lectivo",
+                        title: "Compatibilidad entre vida laboral y cursado",
+                        description: "Agustín está trabajando en una empresa de automatización industrial y ha tenido horas extras que le impiden cursar en el mismo turno asignado originalmente. ¿Qué contempla el reglamento del INSPT al respecto?",
+                        options: [
+                            {
+                                text: "Tramitar una solicitud formal de cambio de turno/comisión ante la Coordinación Académica en los plazos establecidos por calendario académico, adjuntando certificado de trabajo oficial firmado por su empleador.",
+                                isCorrect: true,
+                                feedback: "¡Exacto! El reglamento del INSPT-UTN contempla esta opción dentro de los plazos establecidos y siempre que se presente la correspondiente acréditación de servicios."
+                            },
+                            {
+                                text: "Dejar de asistir al turno tarde sin aviso y presentarse a rendir de forma libre las materias sin cursar a fin de año.",
+                                isCorrect: false,
+                                feedback: "¡Incorrecto! El régimen general requiere el cumplimiento regular de asistencia presencial teórica-práctica. Abandonar la presencialidad conduce a la pérdida de regularidad (Art. 5.1) y en tecno-pedagogías se asocia con tasas de deserción temprana."
+                            }
+                        ]
+                    },
+                    {
+                        avatarName: "Milena",
+                        avatarIcon: "📊",
+                        avatarRole: "Estudiante",
+                        avatarFooter: "Reglamento",
+                        chapterTitle: "Régimen de Aprobación",
+                        title: "Condiciones de Aprobación Directa",
+                        description: "Milena obtuvo 9 en el primer examen parcial de Análisis Matemático I, un 8 en el segundo, y cuenta con un 80% de asistencia registrada. ¿Cuál es su condición académica de acuerdo al reglamento?",
+                        options: [
+                            {
+                                text: "Aprobación Directa: Se exime de rendir el examen final obligatorio al haber superado la nota mínima de 8 en cada instancia y cumplido con el 75% de presencialidad.",
+                                isCorrect: true,
+                                feedback: "¡Excelente! El reglamento especifica que los estudiantes que obtienen como mínimo 8 puntos en cada parcial evaluatorio y asisten al menos al 75% de las clases teóricas-prácticas logran la aprobación directa."
+                            },
+                            {
+                                text: "Cursada Regular: Debe rendir un examen final presencial unificado en los turnos subsiguientes debido a que promedia menos de 9.",
+                                isCorrect: false,
+                                feedback: "¡Incorrecto! No se requiere un promedio de 9 para promocionar. La promoción directa en el INSPT-UTN se alcanza con nota mínima de 8 en cada examen parcial presencial."
+                            }
+                        ]
+                    },
+                    {
+                        avatarName: "Joaquín",
+                        avatarIcon: "🛠️",
+                        avatarRole: "Aspirante Especial",
+                        avatarFooter: "Art. 7 de Ley 24.521 / Art 2.1.3",
+                        chapterTitle: "Régimen de Admisión - Cap. 2",
+                        title: "Ingreso sin Título Secundario Completo",
+                        description: "Joaquín tiene 27 años y amplia trayectoria práctica en plantas metalúrgicas, pero adeuda asignaturas del nivel secundario técnico que no puede concluir. ¿De qué manera puede tramitar su ingreso al nivel superior?",
+                        options: [
+                            {
+                                text: "Consultar sobre el régimen de admisión para mayores de 25 años sin nivel completo completo, superando la evaluación específica de competencias en distintas ramas del conocimiento de la sede.",
+                                isCorrect: true,
+                                feedback: "¡Sobresaliente! En sintonía con el Artículo 7 de la Ley de Educación Superior argentina (24.521), el INSPT permite el ingreso excepcional de mayores de 25 años que, acrediten solvencia laboral y competencias afines."
+                            },
+                            {
+                                text: "Alterar digitalmente una constancia analítica escolar para sortear la traba administrativa y regularizar la situación más adelante.",
+                                isCorrect: false,
+                                feedback: "¡Falso e Ilegal! La falsificación de documentos públicos invalida definitivamente el proceso de matrícula, genera sanciones académicas permanentes y representa una falta ética grave incompatible con el habitus universitario."
+                            }
+                        ]
+                    }
+                ]
+            },
+            // NUEVO NIVEL 5: REGULARIDAD Y PERMANENCIA DE CURSADO
+            level5: {
+                currentIdx: 0,
+                correctCount: 0,
+                isCompleted: false,
+                bank: [
+                    {
+                        category: "Libreta de estudiante",
+                        question: "Un alumno se presenta a la mesa de examen final para rendir una materia del primer año de la carrera, pero no cuenta con libreta física. ¿Qué establece la normativa al respecto?",
+                        options: [
+                            {
+                                text: "El estudiante para rendir el final debe contar con la libreta de estudios que debe tramitar en Dpto de Alumnos.",
+                                isCorrect: true,
+                                feedback: "¡Correcto! Es un requisito administrativo ineludible. Para rendir toda instancia final, el estudiante debe contar con su libreta de estudios tramitada en el Dpto de Alumnos."
+                            },
+                            {
+                                text: "No es obligatoria. Al estar digitalizadas las actas, el alumno puede rendir acreditando su identidad únicamente con el DNI físico.",
+                                isCorrect: false,
+                                feedback: "¡Incorrecto! La normativa establece rigurosamente que el estudiante debe contar con la libreta de estudios física tramitada en el Departamento de Alumnos."
+                            }
+                        ]
+                    },
+                    {
+                        category: "Acreditación de competencias",
+                        question: "Un estudiante cuenta con una sólida trayectoria laboral y académica previa. ¿Bajo qué condiciones puede solicitar la acreditación de competencias y cómo debe proceder?",
+                        options: [
+                            {
+                                text: "El estudiante podrá solicitar la acreditación de competencias adquiridas en la Universidad Tecnológica Nacional y/o en otra institución superior a través de diferentes actividades académicas, trabajos y/o investigaciones relacionadas con la carrera, conforme a lo previsto en la correspondiente Disposición de la Dirección. Consultar en calendario académico las fechas de presentación de documentación (https://inspt.utn.edu.ar/bienestar-estudiantil/) y en Dpto Alumnos las asignaturas que pueden acreditarse por carrera.",
+                                isCorrect: true,
+                                feedback: "¡Excelente! Has citado exactamente la regla de Acreditación de Competencias. El proceso requiere ajustarse a los plazos indicados en el calendario de bienestar estudiantil y tramitar las materias viables según cada carrera."
+                            },
+                            {
+                                text: "Se puede solicitar la acreditación de competencias en cualquier semana del cuatrimestre presentando carpetas directamente a los profesores, sin importar los plazos del calendario institucional.",
+                                isCorrect: false,
+                                feedback: "¡Error reglamentario! El proceso está rigurosamente calendarizado y regulado mediante Disposición de la Dirección y tramitación en Sede Alumnos."
+                            }
+                        ]
+                    },
+                    {
+                        category: "Examen Libre de Inglés Técnico – Tecnicaturas",
+                        question: "En el marco de las Tecnicaturas Superiores del INSPT, ¿qué posibilidad reglamentaria se ofrece sobre Inglés Técnico?",
+                        options: [
+                            {
+                                text: "El estudiante podrá solicitar rendir Inglés Técnico en carácter de libre. Consultar en calendario académico las fechas de presentación de documentación (https://inspt.utn.edu.ar/bienestar-estudiantil/). El trámite se realiza en Dpto Alumnos.",
+                                isCorrect: true,
+                                feedback: "¡Correcto! El examen en carácter libre de Inglés Técnico es un beneficio directo contemplado para estudiantes de Tecnicaturas, tramitado en Alumnos en los periodos del Calendario Académico."
+                            },
+                            {
+                                text: "El Inglés Técnico solo puede cursarse de forma regular cuatrimestral de manera presencial, sin posibilidad alguna de rendir en condición de alumno libre.",
+                                isCorrect: false,
+                                feedback: "¡Incorrecto! La normativa viabiliza de forma explícita el carácter libre de esta materia para estudiantes de tecnicaturas."
+                            }
+                        ]
+                    },
+                    {
+                        category: "Inscripción a materias",
+                        question: "Eres un ingresante que ya cumplimentó los requisitos documentales de preinscripción y admisión. ¿Cómo se efectúa la inscripción de materias para tu primer periodo lectivo?",
+                        options: [
+                            {
+                                text: "Todo estudiante ingresante que haya cumplido con las condiciones establecidas para la inscripción quedará automáticamente inscripto en todas las materias de primer año para el primer cuatrimestre.",
+                                isCorrect: true,
+                                feedback: "¡Perfecto! Un gran beneficio reglamentario para el primer cuatrimestre: el sistema matricula automáticamente en el primer año para evitar la sobrecarga del ingresante."
+                            },
+                            {
+                                text: "El alumno ingresante debe concurrir de forma presencial con un cupón físico para anotarse de manera manual materia por materia en el primer cuatrimestre.",
+                                isCorrect: false,
+                                feedback: "¡Falso! La inscripción al primer cuatrimestre del primer año es totalmente automática para quienes completaron la admisión."
+                            }
+                        ]
+                    },
+                    {
+                        category: "Asistencia y Caducidad de la inscripción",
+                        question: "Un alumno de Robótica registra inasistencias en Análisis Matemático que superan el 25% de la carga horaria total. ¿Cuáles son las consecuencias académicas directas de esta situación?",
+                        options: [
+                            {
+                                text: "El cursado de una asignatura demanda una asistencia obligatoria del SETENTA Y CINCO por ciento (75%). La inasistencia a más del VEINTICINCO por ciento (25%) de la carga horaria total traerá aparejada la caducidad de la inscripción. La caducidad de la inscripción en una asignatura no perjudicará la inscripción en las demás.",
+                                isCorrect: true,
+                                feedback: "¡Excelente! Has respondido fielmente. Se aplica la caducidad en esa asignatura específica (deberá recursarse), sin perjudicar la inscripción regular en el resto de materias del cuatrimestre."
+                            },
+                            {
+                                text: "El alumno pierde automáticamente la condición de regular en la totalidad de la carrera, anulándose el cuatrimestre completo y debiendo reiniciar el curso de ingreso.",
+                                isCorrect: false,
+                                feedback: "¡Incorrecto! La caducidad es particular de la asignatura en falta y no perjudica la regularidad en las otras asignaturas."
+                            }
+                        ]
+                    },
+                    {
+                        category: "Régimen de aprobación",
+                        question: "Analiza detalladamente las condiciones establecidas para el régimen de Aprobación Directa y Examen Final. ¿Qué directrices rigen estas instancias?",
+                        options: [
+                            {
+                                text: "Aprobación Directa (Evaluación continua): Requiere cumplir con prerrequisitos, 75% de asistencia, formación práctica y aprobar evaluaciones (con al menos una instancia de recuperación en planificación). Calificación mínima: OCHO (8) puntos por instancia. Aprobación no directa: Calificación de 6 o 7 habilita final (programa analítico completo). No aprobación: Calificación menor a 6 o quedar libre obliga a recursar.",
+                                isCorrect: true,
+                                feedback: "¡Sobresaliente análisis! La aprobación directa exime las correlatividades del plan de estudios y se obtiene con una nota mínima de 8 puntos en cada evaluación de régimen continuo. Calificaciones de 6 o 7 demandan rendir el examen final tradicional."
+                            },
+                            {
+                                text: "Para aprobación directa se requiere un promedio de 6 entre ambos parciales, no existiendo instancias de recuperación, mientras que notas inferiores a 4 obligan a rendir final obligatorio sobre una sola unidad del programa.",
+                                isCorrect: false,
+                                feedback: "¡Totalmente erróneo! La aprobación directa exige nota mínima de 8 en cada evaluación individual (no promedio), y la no aprobación (<6) exige recursar."
+                            }
+                        ]
+                    },
+                    {
+                        category: "Condición de estudiante regular",
+                        question: "Para mantener tu estatus como alumno regular de la UTN-INSPT en los ciclos lectivos subsiguientes, ¿qué cantidad de materias debes aprobar como mínimo?",
+                        options: [
+                            {
+                                text: "Para mantener la condición de estudiante regular se deberán aprobar como mínimo DOS (2) asignaturas del plan de estudios por ciclo lectivo, no computándose el año lectivo de ingreso en el INSPT.",
+                                isCorrect: true,
+                                feedback: "¡Fiel a la norma! El mínimo reglamentario para no caer en la condición de pasivo es aprobar al menos 2 asignaturas por ciclo lectivo, exceptuando el año de ingreso."
+                            },
+                            {
+                                text: "Se debe aprobar como mínimo una (1) materia cuatrimestral cada dos años lectivos sin excepción de ingreso.",
+                                isCorrect: false,
+                                feedback: "¡Incorrecto! El requisito son al menos dos (2) asignaturas por ciclo lectivo, sin computar el año lectivo de ingreso."
+                            }
+                        ]
+                    }
+                ]
+            }
+        };
+
+        // EVENTOS AL CARGAR LA PÁGINA
+        window.onload = function() {
+            initLevel1();
+            initLevel2();
+            initLevelNew();
+            initLevel3();
+            initLevel5();
+            updateProgressBar();
+        };
+
+        // ACTUALIZACIÓN DE PROGRESO DE LA BARRA
+        function updateProgressBar() {
+            let pBar = document.getElementById('global-progress');
+            let pText = document.getElementById('progress-text');
+            pBar.style.width = gameState.progress + "%";
+            pText.textContent = `Progreso: ${gameState.progress}%`;
+        }
+
+        // CONTROLADOR DE NAVEGACIÓN DE SECCIONES (Sencillo, rápido y sin router)
+        function changeSection(sectionId) {
+            const sections = ['sec-onboarding', 'sec-level1', 'sec-level2', 'sec-level-new', 'sec-level3', 'sec-level5', 'sec-fin'];
+            sections.forEach(s => {
+                document.getElementById(s).classList.add('hidden');
+            });
+            document.getElementById(sectionId).classList.remove('hidden');
+
+            // Ajustar progreso del juego según la sección
+            if (sectionId === 'sec-onboarding') gameState.progress = 10;
+            if (sectionId === 'sec-level1') gameState.progress = 25;
+            if (sectionId === 'sec-level2') gameState.progress = 45;
+            if (sectionId === 'sec-level-new') gameState.progress = 65;
+            if (sectionId === 'sec-level3') gameState.progress = 80;
+            if (sectionId === 'sec-level5') gameState.progress = 95;
+            if (sectionId === 'sec-fin') gameState.progress = 100;
+            updateProgressBar();
+        }
+
+        // ==========================================
+        // LÓGICA DEL NIVEL 1: LABERINTO DE CARRERAS
+        // ==========================================
+        function initLevel1() {
+            let container = document.getElementById('card-container');
+            let currentIdx = gameState.level1.currentIdx;
+            let currentBank = gameState.level1.bank;
+
+            if (currentIdx < currentBank.length) {
+                let card = currentBank[currentIdx];
+                container.innerHTML = `
+                    <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 animate-fade-in">
+                        <span class="text-[10px] uppercase font-bold text-inspt-blue tracking-wider block mb-2">Desafío ${currentIdx + 1} de 5</span>
+                        <h5 class="text-xs font-bold text-slate-400 mb-1">Descriptor de Competencia:</h5>
+                        <p class="text-xs md:text-sm text-slate-700 leading-relaxed font-semibold italic">"${card.text}"</p>
+                    </div>
+                `;
+            } else {
+                container.innerHTML = `
+                    <div class="bg-emerald-50 p-5 rounded-2xl border border-emerald-200 text-center animate-fade-in">
+                        <span class="text-4xl block">🏆</span>
+                        <h4 class="font-extrabold text-sm text-emerald-800 mt-2">¡Nivel 1 Completado con éxito!</h4>
+                        <p class="text-xs text-slate-600 mt-1">Conoces con exactitud la taxonomía que deslinda Profesorados y Tecnicaturas.</p>
+                    </div>
+                `;
+                // Desbloquear botón para continuar
+                let btn = document.getElementById('btn-next-l1');
+                btn.removeAttribute('disabled');
+                btn.className = "bg-inspt-blue hover:bg-inspt-dark text-white font-bold py-3 px-6 rounded-xl transition-all inline-flex items-center gap-2 shadow-md transform hover:-translate-y-0.5 cursor-pointer";
+                gameState.level1.isCompleted = true;
+            }
+            document.getElementById('l1-score').textContent = gameState.level1.correctCount;
+        }
+
+        function assignCategory(userCategory) {
+            if (gameState.level1.isCompleted) return;
+
+            let currentIdx = gameState.level1.currentIdx;
+            let card = gameState.level1.bank[currentIdx];
+
+            if (card.category === userCategory) {
+                gameState.level1.correctCount++;
+                playSuccessSound();
+                showModal(
+                    true,
+                    "¡Perfil Identificado!",
+                    card.feedback,
+                    "Siguiente Competencia",
+                    () => {
+                        gameState.level1.currentIdx++;
+                        initLevel1();
+                    }
+                );
+            } else {
+                playFailureSound();
+                let failFeedback = `Pista Curricular: Analiza las incumbencias laborales. El perfil "${card.title}" pone foco en ${card.category === 'Profesorado' ? 'la transposición didáctica de aula en colegios industriales' : 'la resolución instrumental de problemáticas técnicas de planta industrial'}. Reevalúa tu decisión.`;
+                showModal(
+                    false,
+                    "Clasificación Imprecisa",
+                    failFeedback,
+                    "Reintentar Desafío",
+                    null
+                );
+            }
+        }
+
+        // ==========================================
+        // LÓGICA DEL NIVEL 2: CARRERA DE INSCRIPCIÓN
+        // ==========================================
+        function initLevel2() {
+            let optionsContainer = document.getElementById('timeline-options');
+            let slotsContainer = document.getElementById('timeline-slots');
+           
+            optionsContainer.innerHTML = "";
+            slotsContainer.innerHTML = "";
+
+            // Cargar slots vacíos de la línea de tiempo (5 Pasos)
+            for (let i = 0; i < 5; i++) {
+                let assignedId = gameState.level2.userSequence[i];
+                if (assignedId) {
+                    let hito = gameState.level2.allHitos[assignedId];
+                    slotsContainer.innerHTML += `
+                        <div class="flex items-start gap-3 bg-inspt-blue text-white p-3.5 rounded-xl border border-inspt-dark shadow-md animate-fade-in">
+                            <span class="w-6 h-6 rounded-full bg-inspt-light text-white text-xs font-black flex items-center justify-center shrink-0 mt-0.5">${i + 1}</span>
+                            <div>
+                                <span class="text-xs font-extrabold block tracking-wide">${hito.text}</span>
+                                <p class="text-[9px] text-sky-100 mt-1 leading-normal">${hito.desc}</p>
+                            </div>
+                        </div>
+                    `;
+                } else {
+                    slotsContainer.innerHTML += `
+                        <div class="flex items-center gap-3 bg-slate-100/80 p-3.5 rounded-xl border-2 border-dashed border-slate-300 text-slate-400">
+                            <span class="w-6 h-6 rounded-full bg-slate-200 text-slate-400 text-xs font-black flex items-center justify-center shrink-0">${i + 1}</span>
+                            <span class="text-xs italic font-medium">Vacante administrativa disponible...</span>
+                        </div>
+                    `;
+                }
+            }
+
+            // Cargar botones disponibles
+            Object.keys(gameState.level2.allHitos).forEach(key => {
+                let hito = gameState.level2.allHitos[key];
+                let isSelected = gameState.level2.userSequence.includes(key);
+               
+                if (!isSelected) {
+                    optionsContainer.innerHTML += `
+                        <button onclick="playClickSound(); selectHito('${key}')" class="w-full text-left p-3.5 rounded-xl bg-white border border-slate-200 hover:border-inspt-light hover:bg-slate-50 transition-all shadow-sm flex items-start gap-2.5 transform hover:-translate-y-0.5">
+                            <span class="text-xs font-black text-inspt-blue mt-0.5">▶</span>
+                            <div>
+                                <span class="text-xs font-bold text-slate-800 block">${hito.text}</span>
+                                <span class="text-[10px] text-slate-500 leading-normal block mt-1">${hito.desc.substring(0, 105)}...</span>
+                            </div>
+                        </button>
+                    `;
+                } else {
+                    optionsContainer.innerHTML += `
+                        <div class="w-full text-left p-3.5 rounded-xl bg-slate-100 border border-slate-200 text-slate-400 flex items-start gap-2.5 select-none opacity-60">
+                            <span class="text-xs mt-0.5 font-bold">✔</span>
+                            <div>
+                                <span class="text-xs font-extrabold block text-slate-400">${hito.text}</span>
+                                <span class="text-[10px] leading-normal block mt-1">${hito.desc.substring(0, 85)}...</span>
+                            </div>
+                        </div>
+                    `;
+                }
+            });
+
+            checkLevel2Completion();
+        }
+
+        function selectHito(hitoId) {
+            if (gameState.level2.userSequence.length < 5) {
+                gameState.level2.userSequence.push(hitoId);
+                initLevel2();
+            }
+        }
+
+        function resetTimeline() {
+            gameState.level2.userSequence = [];
+            initLevel2();
+           
+            // Re-bloquear botón de avance
+            let btn = document.getElementById('btn-next-l2');
+            btn.setAttribute('disabled', 'true');
+            btn.className = "bg-slate-300 text-slate-500 font-bold py-3 px-6 rounded-xl cursor-not-allowed transition-all inline-flex items-center gap-2";
+        }
+
+        function checkLevel2Completion() {
+            if (gameState.level2.userSequence.length === 5) {
+                // Comprobamos secuencia
+                let isSequenceCorrect = true;
+                for (let i = 0; i < 5; i++) {
+                    if (gameState.level2.userSequence[i] !== gameState.level2.correctSequence[i]) {
+                        isSequenceCorrect = false;
+                        break;
+                    }
+                }
+
+                if (isSequenceCorrect) {
+                    playSuccessSound();
+                    showModal(
+                        true,
+                        "¡Proceso de Admisión Secuenciado!",
+                        "¡Excelente secuenciación de hitos administrativos! Has ordenado exactamente el recorrido normativo del ingresante previsto en el Capítulo 3: 1º Preinscripción virtual -> 2° Entrega de carpeta física reglamentaria en Triunvirato 3174 -> 3º Consolidación de cupo y asignación de vacante -> 4° Acreditación presencial del módulo de ingreso (asistencia >= 75%) -> 5° Conciencia plena de la condicionalidad académica si registras deudas del nivel secundario.",
+                        "Avanzar al Nivel 3",
+                        () => {
+                            let btn = document.getElementById('btn-next-l2');
+                            btn.removeAttribute('disabled');
+                            btn.className = "bg-inspt-blue hover:bg-inspt-dark text-white font-bold py-3 px-6 rounded-xl transition-all inline-flex items-center gap-2 shadow-md transform hover:-translate-y-0.5 cursor-pointer";
+                        }
+                    );
+                } else {
+                    playFailureSound();
+                    showModal(
+                        false,
+                        "Inconsistencia de Flujo",
+                        "¡Alerta Reglamentaria! No es posible cursar módulos de ingreso, consolidar cupos de vacantes ni regularizar deudas escolares si no has formalizado primero tu preinscripción web y entregado de forma física la carpeta de ingreso en Sede Alumnos. Reevalúa y ordena la línea de tiempo.",
+                        "Reiniciar Trayecto",
+                        () => {
+                            resetTimeline();
+                        }
+                    );
+                }
+            }
+        }
+
+        // ==========================================
+        // LÓGICA DEL NUEVO NIVEL 3: MITOS VS REALIDADES
+        // ==========================================
+        function initLevelNew() {
+            let currentIdx = gameState.levelNew.currentIdx;
+            let questions = gameState.levelNew.questions;
+            let scoreContainer = document.getElementById('lnew-score');
+            let progressText = document.getElementById('lnew-progress-text');
+            let questionText = document.getElementById('lnew-question-text');
+
+            scoreContainer.textContent = gameState.levelNew.correctCount;
+
+            if (currentIdx < questions.length) {
+                progressText.textContent = `Declaración ${currentIdx + 1} de ${questions.length}`;
+                questionText.textContent = questions[currentIdx].statement;
+            } else {
+                progressText.textContent = "¡Validación Completada!";
+                questionText.innerHTML = `
+                    <div class="text-center w-full py-2">
+                        <span class="text-3xl block">🔬</span>
+                        <h5 class="text-emerald-800 font-extrabold text-sm mt-1">¡Diagnóstico Administrativo Concluido!</h5>
+                        <p class="text-[11px] text-slate-500 leading-relaxed font-normal mt-1">
+                            Has discernido con éxito los mitos de las realidades administrativas institucionales.
+                        </p>
+                    </div>
+                `;
+                // Desbloquear botón para continuar
+                let btn = document.getElementById('btn-next-lnew');
+                btn.removeAttribute('disabled');
+                btn.className = "bg-inspt-blue hover:bg-inspt-dark text-white font-bold py-3 px-6 rounded-xl transition-all inline-flex items-center gap-2 shadow-md transform hover:-translate-y-0.5 cursor-pointer";
+                gameState.levelNew.isCompleted = true;
+            }
+        }
+
+        function submitLevelNewAnswer(userAnswer) {
+            if (gameState.levelNew.isCompleted) return;
+
+            let currentIdx = gameState.levelNew.currentIdx;
+            let currentQuestion = gameState.levelNew.questions[currentIdx];
+
+            if (userAnswer === currentQuestion.isTrue) {
+                gameState.levelNew.correctCount++;
+                playSuccessSound();
+                showModal(
+                    true,
+                    "¡Evaluación Correcta!",
+                    currentQuestion.feedback,
+                    "Siguiente Declaración",
+                    () => {
+                        gameState.levelNew.currentIdx++;
+                        initLevelNew();
+                    }
+                );
+            } else {
+                playFailureSound();
+                let modalTitle = currentQuestion.isTrue ? "Mito mal detectado" : "Realidad mal detectada";
+                showModal(
+                    false,
+                    modalTitle,
+                    currentQuestion.feedback,
+                    "Analizar de nuevo",
+                    null
+                );
+            }
+        }
+
+        // ==========================================
+        // LÓGICA DEL NIVEL 4 (EX-3): SIMULADOR DE CASOS
+        // ==========================================
+        function initLevel3() {
+            let currentIdx = gameState.level3.currentIdx;
+            let scenarios = gameState.level3.scenarios;
+
+            if (currentIdx < scenarios.length) {
+                let sc = scenarios[currentIdx];
+               
+                // Actualizar info visual del escenario con transiciones
+                document.getElementById('case-avatar-name').textContent = sc.avatarName;
+                document.getElementById('case-avatar-icon').textContent = sc.avatarIcon;
+                document.getElementById('case-avatar-role').textContent = sc.avatarRole;
+                document.getElementById('case-avatar-footer').textContent = sc.avatarFooter;
+               
+                document.getElementById('case-chapter-title').textContent = sc.chapterTitle;
+                document.getElementById('case-title').textContent = sc.title;
+                document.getElementById('case-description').textContent = sc.description;
+
+                // Cargar opciones
+                let optionsContainer = document.getElementById('case-options');
+                optionsContainer.innerHTML = "";
+
+                sc.options.forEach((opt, idx) => {
+                    optionsContainer.innerHTML += `
+                        <button onclick="playClickSound(); submitScenarioOption(${idx})" class="w-full text-left p-4 rounded-xl border border-slate-200 hover:border-inspt-light hover:bg-slate-50 transition-all shadow-sm text-xs md:text-sm font-semibold flex items-center gap-3 transform hover:-translate-y-0.5">
+                            <span class="w-6 h-6 rounded-full bg-inspt-blue/10 text-inspt-blue flex items-center justify-center font-bold text-xs shrink-0">${idx === 0 ? 'A' : 'B'}</span>
+                            <span class="text-slate-700 leading-relaxed">${opt.text}</span>
+                        </button>
+                    `;
+                });
+            } else {
+                // Fin de todos los escenarios
+                document.getElementById('case-avatar-name').textContent = "Ingresante";
+                document.getElementById('case-avatar-icon').textContent = "👑";
+                document.getElementById('case-avatar-role').textContent = "Estatus: Regular";
+                document.getElementById('case-avatar-footer').textContent = "Acreditación completa";
+
+                document.getElementById('case-title').textContent = "¡Resolución Completa de Casos!";
+                document.getElementById('case-description').innerHTML = `
+                    <div class="text-center p-5 bg-emerald-50 rounded-2xl border border-emerald-200 animate-fade-in">
+                        <span class="text-5xl">👑</span>
+                        <h4 class="font-black text-emerald-800 mt-2 text-base">¡Felicidades, Administrador del Reglamento!</h4>
+                        <p class="text-xs text-slate-600 mt-1">Demostraste una excelente competencia para diagnosticar dilemas estudiantiles basándote estrictamente en las normativas del INSPT-UTN.</p>
+                    </div>
+                `;
+                document.getElementById('case-options').innerHTML = "";
+               
+                // Habilitar botón para el final
+                let btn = document.getElementById('btn-next-l3');
+                btn.removeAttribute('disabled');
+                btn.className = "bg-inspt-blue hover:bg-inspt-dark text-white font-bold py-3 px-6 rounded-xl transition-all inline-flex items-center gap-2 shadow-md transform hover:-translate-y-0.5 cursor-pointer";
+                gameState.level3.isCompleted = true;
+            }
+        }
+
+        function submitScenarioOption(optIdx) {
+            if (gameState.level3.isCompleted) return;
+
+            let currentIdx = gameState.level3.currentIdx;
+            let sc = gameState.level3.scenarios[currentIdx];
+            let opt = sc.options[optIdx];
+
+            if (opt.isCorrect) {
+                playSuccessSound();
+                showModal(
+                    true,
+                    "¡Decisión de Gestión Adecuada!",
+                    opt.feedback,
+                    "Siguiente Caso Reglamentario",
+                    () => {
+                        gameState.level3.currentIdx++;
+                        initLevel3();
+                    }
+                );
+            } else {
+                playFailureSound();
+                showModal(
+                    false,
+                    "Desvío Reglamentario",
+                    opt.feedback,
+                    "Reevaluar Caso de Alumno",
+                    null
+                );
+            }
+        }
+
+        // ==========================================
+        // LÓGICA DEL NUEVO NIVEL 5: REGULARIDAD Y PERMANENCIA
+        // ==========================================
+        function initLevel5() {
+            let currentIdx = gameState.level5.currentIdx;
+            let currentBank = gameState.level5.bank;
+            let counter = document.getElementById('l5-progress-counter');
+            let progressText = document.getElementById('l5-progress-text');
+            let categoryText = document.getElementById('l5-question-category');
+            let questionText = document.getElementById('l5-question-text');
+            let optionsContainer = document.getElementById('l5-options-container');
+
+            counter.textContent = gameState.level5.correctCount;
+
+            if (currentIdx < currentBank.length) {
+                let activeTask = currentBank[currentIdx];
+                progressText.textContent = `Pauta Académica ${currentIdx + 1} de ${currentBank.length}`;
+                categoryText.textContent = `Regla: ${activeTask.category}`;
+                questionText.textContent = activeTask.question;
+
+                optionsContainer.innerHTML = "";
+                activeTask.options.forEach((opt, idx) => {
+                    optionsContainer.innerHTML += `
+                        <button onclick="playClickSound(); submitLevel5Answer(${idx})" class="w-full text-left p-4 rounded-xl border border-slate-200 hover:border-teal-500 hover:bg-slate-100 transition-all shadow-sm text-xs md:text-sm font-semibold flex items-start gap-3 transform hover:-translate-y-0.5">
+                            <span class="w-6 h-6 rounded-full bg-teal-100 text-teal-800 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">${idx === 0 ? 'A' : 'B'}</span>
+                            <span class="text-slate-700 leading-relaxed">${opt.text}</span>
+                        </button>
+                    `;
+                });
+            } else {
+                progressText.textContent = "¡Permanencia Evaluada con Éxito!";
+                categoryText.textContent = "Estado: Aprobado";
+                questionText.innerHTML = `
+                    <div class="text-center w-full py-4 bg-teal-50 rounded-2xl border border-teal-200 animate-fade-in">
+                        <span class="text-5xl block">⚖️</span>
+                        <h4 class="font-extrabold text-sm text-teal-800 mt-2">¡Nivel 5 de Permanencia Académica Concluido!</h4>
+                        <p class="text-xs text-slate-600 mt-2 max-w-md mx-auto leading-relaxed">
+                            Has demostrado un conocimiento exhaustivo de la reglamentación sobre asistencia, libreta, acreditación de competencias, regularidad anual e inscripciones automáticas.
+                        </p>
+                    </div>
+                `;
+                optionsContainer.innerHTML = "";
+               
+                // Desbloquear botón final
+                let btn = document.getElementById('btn-next-l5');
+                btn.removeAttribute('disabled');
+                btn.className = "bg-inspt-blue hover:bg-inspt-dark text-white font-bold py-3 px-6 rounded-xl transition-all inline-flex items-center gap-2 shadow-md transform hover:-translate-y-0.5 cursor-pointer";
+                gameState.level5.isCompleted = true;
+            }
+        }
+
+        function submitLevel5Answer(optionIdx) {
+            if (gameState.level5.isCompleted) return;
+
+            let currentIdx = gameState.level5.currentIdx;
+            let currentTask = gameState.level5.bank[currentIdx];
+            let opt = currentTask.options[optionIdx];
+
+            if (opt.isCorrect) {
+                gameState.level5.correctCount++;
+                playSuccessSound();
+                showModal(
+                    true,
+                    "¡Regla de Permanencia Validada!",
+                    opt.feedback,
+                    "Siguiente Caso de Regularidad",
+                    () => {
+                        gameState.level5.currentIdx++;
+                        initLevel5();
+                    }
+                );
+            } else {
+                playFailureSound();
+                showModal(
+                    false,
+                    "Desvío del Estatuto Académico",
+                    opt.feedback,
+                    "Analizar la Norma Nuevamente",
+                    null
+                );
+            }
+        }
+
+        // ==========================================
+        // SISTEMA DE MODALES PERSONALIZADOS
+        // ==========================================
+        let currentModalCallback = null;
+
+        function showModal(isCorrect, title, text, actionText, callback) {
+            const modal = document.getElementById('feedback-modal');
+            const box = document.getElementById('feedback-content-box');
+            const hBg = document.getElementById('modal-header-bg');
+            const hTitle = document.getElementById('modal-header-title');
+            const sIcon = document.getElementById('modal-status-icon');
+            const sBadge = document.getElementById('modal-status-badge');
+            const sTitle = document.getElementById('modal-status-title');
+            const explanation = document.getElementById('modal-explanation');
+            const actionBtn = document.getElementById('modal-action-btn');
+            const badgeContainer = document.getElementById('modal-status-badge-container');
+
+            // Setear Callback
+            currentModalCallback = callback;
+
+            // Ajustar visuales según validez
+            if (isCorrect) {
+                hBg.className = "bg-emerald-600 p-4 flex justify-between items-center text-white";
+                hTitle.innerHTML = `<span>🎉</span> Decisión Correcta`;
+                sIcon.textContent = "🏆";
+                badgeContainer.className = "w-12 h-12 rounded-full flex items-center justify-center text-3xl shadow-inner bg-emerald-50 text-emerald-600 border border-emerald-100";
+                sBadge.className = "bg-emerald-100 text-emerald-800 text-[10px] font-extrabold px-2.5 py-1 rounded-md uppercase tracking-wider border border-emerald-200";
+                sBadge.textContent = "Éxito";
+                actionBtn.className = "w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 rounded-xl text-xs uppercase tracking-widest transition-all shadow-md transform hover:-translate-y-0.5 cursor-pointer";
+            } else {
+                hBg.className = "bg-rose-600 p-4 flex justify-between items-center text-white";
+                hTitle.innerHTML = `<span>⚠️</span> Desvío de la Ruta`;
+                sIcon.textContent = "❌";
+                badgeContainer.className = "w-12 h-12 rounded-full flex items-center justify-center text-3xl shadow-inner bg-rose-50 text-rose-600 border border-rose-100";
+                sBadge.className = "bg-rose-100 text-rose-800 text-[10px] font-extrabold px-2.5 py-1 rounded-md uppercase tracking-wider border border-rose-200";
+                sBadge.textContent = "Alerta";
+                actionBtn.className = "w-full bg-rose-600 hover:bg-rose-700 text-white font-bold py-3 rounded-xl text-xs uppercase tracking-widest transition-all shadow-md transform hover:-translate-y-0.5 cursor-pointer";
+            }
+
+            sTitle.textContent = title;
+            explanation.textContent = text;
+            actionBtn.textContent = actionText;
+
+            // Animación de entrada
+            modal.classList.remove('pointer-events-none');
+            modal.classList.add('opacity-100');
+            box.classList.remove('scale-95');
+            box.classList.add('scale-100');
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('feedback-modal');
+            const box = document.getElementById('feedback-content-box');
+
+            modal.classList.remove('opacity-100');
+            modal.classList.add('pointer-events-none');
+            box.classList.remove('scale-100');
+            box.classList.add('scale-95');
+
+            // Ejecutar el callback de manera asíncrona si existe
+            if (currentModalCallback) {
+                setTimeout(() => {
+                    currentModalCallback();
+                    currentModalCallback = null;
+                }, 150);
+            }
+        }
+
+        // REINICIAR TODO EL ESTADO
+        function resetGame() {
+            gameState.progress = 10;
+           
+            // Nivel 1
+            gameState.level1.currentIdx = 0;
+            gameState.level1.correctCount = 0;
+            gameState.level1.isCompleted = false;
+           
+            // Nivel 2
+            gameState.level2.isCompleted = false;
+            gameState.level2.userSequence = [];
+
+            // Nivel Nuevo (Mitos vs. Realidades)
+            gameState.levelNew.currentIdx = 0;
+            gameState.levelNew.correctCount = 0;
+            gameState.levelNew.isCompleted = false;
+           
+            // Nivel 3 (Dilemas)
+            gameState.level3.currentIdx = 0;
+            gameState.level3.isCompleted = false;
+
+            // Nivel 5 (Permanencia)
+            gameState.level5.currentIdx = 0;
+            gameState.level5.correctCount = 0;
+            gameState.level5.isCompleted = false;
+
+            // Reiniciar botones e interfaces
+            document.getElementById('btn-next-l1').setAttribute('disabled', 'true');
+            document.getElementById('btn-next-l1').className = "bg-slate-300 text-slate-500 font-bold py-3 px-6 rounded-xl cursor-not-allowed transition-all inline-flex items-center gap-2";
+           
+            document.getElementById('btn-next-l2').setAttribute('disabled', 'true');
+            document.getElementById('btn-next-l2').className = "bg-slate-300 text-slate-500 font-bold py-3 px-6 rounded-xl cursor-not-allowed transition-all inline-flex items-center gap-2";
+
+            document.getElementById('btn-next-lnew').setAttribute('disabled', 'true');
+            document.getElementById('btn-next-lnew').className = "bg-slate-300 text-slate-500 font-bold py-3 px-6 rounded-xl cursor-not-allowed transition-all inline-flex items-center gap-2";
+
+            document.getElementById('btn-next-l3').setAttribute('disabled', 'true');
+            document.getElementById('btn-next-l3').className = "bg-slate-300 text-slate-500 font-bold py-3 px-6 rounded-xl cursor-not-allowed transition-all inline-flex items-center gap-2";
+
+            document.getElementById('btn-next-l5').setAttribute('disabled', 'true');
+            document.getElementById('btn-next-l5').className = "bg-slate-300 text-slate-500 font-bold py-3 px-6 rounded-xl cursor-not-allowed transition-all inline-flex items-center gap-2";
+
+            initLevel1();
+            initLevel2();
+            initLevelNew();
+            initLevel3();
+            initLevel5();
+           
+            changeSection('sec-onboarding');
+        }
+    </script>
+</body>
+</html>
