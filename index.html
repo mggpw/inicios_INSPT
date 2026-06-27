@@ -369,7 +369,7 @@
         <!-- PANTALLA FINAL -->
         <section id="sec-fin" class="hidden bg-white rounded-2xl shadow-xl border border-slate-100 p-6 md:p-10 text-center max-w-3xl mx-auto transition-all duration-300">
             <div class="no-print">
-                <span class="bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-widest">Acreditación Académica Completada</span>
+                <span class="bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-widest">Niveles Completos</span>
                 <h2 class="text-3xl font-black text-inspt-dark mt-4 mb-2">¡Felicitaciones, ingresante de la UTN-INSPT!</h2>
                 <p class="text-slate-600 text-sm md:text-base leading-relaxed mb-6 max-w-xl mx-auto">Te invitamos a recorrer los reglamentos y página web para conocer en más detalle la normativa del INSPT.</p>
             </div>
@@ -377,7 +377,7 @@
                 <div class="absolute right-[-30px] bottom-[-30px] opacity-10 text-9xl font-black select-none pointer-events-none">UTN</div>
                 <div class="flex justify-between items-start border-b border-white/20 pb-4 mb-6">
                     <div>
-                        <h4 class="text-lg font-black tracking-wider text-white">PASAPORTE DEL INGRESANTE</h4>
+                        <h4 class="text-lg font-black tracking-wider text-white"></h4>
                         <p class="text-[10px] text-inspt-light font-extrabold uppercase tracking-widest">Instituto Nacional Superior del Profesorado Técnico</p>
                     </div>
                     <svg class="w-8 h-8 text-inspt-light shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
@@ -385,8 +385,8 @@
                 <div class="grid grid-cols-2 gap-y-4 gap-x-6 text-xs mb-6">
                     <div><span class="text-slate-400 block uppercase font-bold tracking-wider text-[9px]">Destinatario</span><span class="font-bold text-sm text-white">Aspirante al INSPT</span></div>
                     <div><span class="text-slate-400 block uppercase font-bold tracking-wider text-[9px]">Institución</span><span class="font-bold text-sm text-white">Universidad Tecnológica Nacional</span></div>
-                    <div><span class="text-slate-400 block uppercase font-bold tracking-wider text-[9px]">Capacidad</span><span class="font-bold text-sm text-inspt-light">Diagnóstico sobre Normativa Académica</span></div>
-                    <div><span class="text-slate-400 block uppercase font-bold tracking-wider text-[9px]">Estatus</span><span class="font-bold text-sm text-emerald-400 flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>Preinscripción Validada</span></div>
+                    <div><span class="text-slate-400 block uppercase font-bold tracking-wider text-[9px]"></span><span class="font-bold text-sm text-inspt-light">Diagnóstico sobre Normativa Académica</span></div>
+                    <div><span class="text-slate-400 block uppercase font-bold tracking-wider text-[9px]"></span><span class="font-bold text-sm text-emerald-400 flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span></span></div>
                 </div>
                 <div class="border-t border-white/20 pt-4 space-y-3">
                     <h5 class="text-[10px] font-black uppercase tracking-wider text-inspt-light">Importante: consulta Accesos Oficiales:</h5>
@@ -540,15 +540,15 @@
                 { text: "Todo estudiante ingresante que haya cumplido con las condiciones establecidas para la inscripción quedará automaticamente inscripto en todas las materias de primer anio para el primer cuatrimestre.", isCorrect: true, feedback: "Perfecto! El sistema matricula automaticamente en el primer anio para evitar la sobrecarga del ingresante." },
                 { text: "El alumno ingresante debe concurrir de forma presencial con un cupon fisico para anotarse de manera manual materia por materia en el primer cuatrimestre.", isCorrect: false, feedback: "Falso! La inscripción al primer cuatrimestre del primer año es totalmente automática para quienes completaron la admision." }
             ]},
-            { category: "Asistencia y Caducidad de la inscripción", question: "Un alumno de Robótica registra inasistencias en Análisis Matemático que superan el 25% de la carga horaria total. Cuales son las consecuencias académicas directas de esta situacion?", options: [
+            { category: "Asistencia y Caducidad de la inscripción", question: "Un alumno de Robótica registra inasistencias en Análisis Matemático que superan el 25% de la carga horaria total. ¿Cuáles son las consecuencias académicas directas de esta situacion?", options: [
                 { text: "El cursado de una asignatura demanda una asistencia obligatoria del 75%. La inasistencia a mas del 25% de la carga horaria total traera aparejada la caducidad de la inscripción. La caducidad de la inscripción en una asignatura no perjudicara la inscripción en las demas.", isCorrect: true, feedback: "Excelente! Se aplica la caducidad en esa asignatura especifica (debera recursarse), sin perjudicar la inscripción regular en el resto de materias del cuatrimestre." },
                 { text: "El alumno pierde automaticamente la condición de regular en la totalidad de la carrera, anulandose el cuatrimestre completo y debiendo reiniciar el curso de ingreso.", isCorrect: false, feedback: "Incorrecto! La caducidad es particular de la asignatura en falta y no perjudica la regularidad en las otras asignaturas." }
             ]},
-            { category: "Regimen de Aprobación", question: "Analiza detalladamente las condiciones establecidas para el regimen de Aprobación Directa y Examen Final. En que consisten estas instancias?", options: [
+            { category: "Regimen de Aprobación", question: "Analiza detalladamente las condiciones establecidas para el regimen de Aprobación Directa y Examen Final. ¿En qu{e consisten estas instancias?", options: [
                 { text: "Aprobación Directa: Requiere 75% de asistencia y aprobar parciales o TP con calificacion minima de OCHO (8) puntos por instancia (con al menos una instancia de recuperacion). Aprobación no directa: Calificacion de 6 o 7 habilita final con programa analítico completo. Calificacion menor a 6 o quedar libre obliga a recursar.", isCorrect: true, feedback: "Sobresaliente analisis! La Aprobación directa exime las correlatividades del plan de estudios y se obtiene con una nota minima de 8 puntos en cada Evaluación. Calificaciones de 6 o 7 demandan rendir el examen final tradicional." },
                 { text: "Para Aprobación directa se requiere un promedio de 6 entre ambos parciales, no existiendo instancias de recuperacion, mientras que notas inferiores a 4 obligan a rendir final obligatorio sobre una sola unidad del programa.", isCorrect: false, feedback: "Totalmente erroneo! La Aprobación directa exige nota minima de 8 en cada Evaluación individual (no promedio), y la no Aprobación (<6) exige recursar." }
             ]},
-            { category: "Condición de estudiante regular", question: "Para mantener tu estatus como alumno regular de la UTN-INSPT en los ciclos lectivos subsiguientes, que cantidad de materias debes aprobar como minimo?", options: [
+            { category: "Condición de estudiante regular", question: "Para mantener condición como alumno regular de la UTN-INSPT en los ciclos lectivos subsiguientes, ¿qué cantidad de materias debes aprobar como minimo?", options: [
                 { text: "Para mantener la condición de estudiante regular se deberan aprobar como minimo DOS (2) asignaturas del plan de estudios por ciclo lectivo, no computandose el anio lectivo de ingreso en el INSPT.", isCorrect: true, feedback: "Fiel a la norma! El minimo reglamentario para no caer en la condición de pasivo es aprobar al menos 2 asignaturas por ciclo lectivo, exceptuando el anio de ingreso." },
                 { text: "Se debe aprobar como minimo una (1) materia cuatrimestral cada dos años lectivos sin excepcion de ingreso.", isCorrect: false, feedback: "Incorrecto! El requisito son al menos dos (2) asignaturas por ciclo lectivo, sin computar el anio lectivo de ingreso." }
             ]}
@@ -635,8 +635,8 @@
             document.getElementById('l5-question-text').textContent=task.question;
             document.getElementById('l5-options-container').innerHTML=task.options.map((opt,i)=>`<button onclick="playClickSound();submitLevel5Answer(${i})" class="w-full text-left p-4 rounded-xl border border-slate-200 hover:border-teal-500 hover:bg-slate-100 transition-all shadow-sm text-xs md:text-sm font-semibold flex items-start gap-3 transform hover:-translate-y-0.5"><span class="w-6 h-6 rounded-full bg-teal-100 text-teal-800 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">${i===0?'A':'B'}</span><span class="text-slate-700 leading-relaxed">${opt.text}</span></button>`).join('');
         }else{
-            document.getElementById('l5-progress-text').textContent='Permanencia Evaluada!';document.getElementById('l5-question-category').textContent='Estado: Aprobado';
-            document.getElementById('l5-question-text').innerHTML=`<div class="text-center w-full py-4 bg-teal-50 rounded-2xl border border-teal-200 animate-fade-in"><span class="text-5xl block">⚖️</span><h4 class="font-extrabold text-sm text-teal-800 mt-2">Nivel 5 Concluido!</h4><p class="text-xs text-slate-600 mt-2 max-w-md mx-auto leading-relaxed">Has demostrado conocimiento exhaustivo de la reglamentación académica.</p></div>`;
+            document.getElementById('l5-progress-text').textContent='';document.getElementById('l5-question-category').textContent='';
+            document.getElementById('l5-question-text').innerHTML=`<div class="text-center w-full py-4 bg-teal-50 rounded-2xl border border-teal-200 animate-fade-in"><span class="text-5xl block">⚖️</span><h4 class="font-extrabold text-sm text-teal-800 mt-2">Nivel 5 Concluido!</h4><p class="text-xs text-slate-600 mt-2 max-w-md mx-auto leading-relaxed">Has demostrado conocimiento de la reglamentación académica.</p></div>`;
             document.getElementById('l5-options-container').innerHTML='';unlockBtn('btn-next-l5');state.level5.done=true;
         }
     }
