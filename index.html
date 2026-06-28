@@ -222,7 +222,7 @@
                     <h2 class="text-2xl font-black text-inspt-dark">Las consultas vinculadas con el ingreso</h2>
                 </div>
                 <div class="bg-indigo-50 text-indigo-700 text-xs px-3 py-1.5 rounded-lg border border-indigo-100 font-bold shrink-0">
-                    Aciertos: <span id="lnew-score" class="text-sm font-black">0</span> de 9 correctos
+                    Aciertos: <span id="lnew-score" class="text-sm font-black">0</span> de 10 correctos
                 </div>
             </div>
             <p class="text-sm text-slate-600 mb-6 leading-relaxed">
@@ -233,7 +233,7 @@
                 <div class="lg:col-span-8 p-6 bg-slate-50 border border-slate-200 rounded-2xl flex flex-col justify-between min-h-[300px]">
                     <div>
                         <div class="flex items-center justify-between border-b pb-3 mb-4">
-                            <span class="text-[10px] uppercase font-bold text-indigo-600 tracking-wider block" id="lnew-progress-text">Caso 1 de 9</span>
+                            <span class="text-[10px] uppercase font-bold text-indigo-600 tracking-wider block" id="lnew-progress-text">Caso 1 de 10</span>
                             <span class="bg-indigo-100 text-indigo-800 text-[9px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">Mesa de Ayuda</span>
                         </div>
                         <h4 class="text-xs font-extrabold text-slate-400 uppercase tracking-wider mb-2">Declaración del Aspirante:</h4>
@@ -334,7 +334,7 @@
                     <h2 class="text-2xl font-black text-inspt-dark">El Tablero de Control Académico</h2>
                 </div>
                 <div class="bg-teal-50 text-teal-700 text-xs px-3 py-1.5 rounded-lg border border-teal-100 font-bold shrink-0">
-                    Auditado: <span id="l5-progress-counter" class="text-sm font-black">0</span> de 7 pautas
+                    Auditado: <span id="l5-progress-counter" class="text-sm font-black">0</span> de 12 pautas
                 </div>
             </div>
             <p class="text-sm text-slate-600 mb-6 leading-relaxed">Como alumno regular de la UTN-INSPT, debes manejar con precisión los mecanismos de cursado, asistencia, acreditaciones e inscripciones a exámenes finales para asegurar tu permanencia sin contratiempos.</p>
@@ -342,7 +342,7 @@
                 <div class="lg:col-span-8 p-6 bg-slate-50 border border-slate-200 rounded-2xl flex flex-col justify-between min-h-[320px]">
                     <div>
                         <div class="flex items-center justify-between border-b pb-3 mb-4">
-                            <span class="text-[10px] uppercase font-bold text-teal-600 tracking-wider block" id="l5-progress-text">Caso de Estudio 1 de 7</span>
+                            <span class="text-[10px] uppercase font-bold text-teal-600 tracking-wider block" id="l5-progress-text">Caso de Estudio 1 de 12</span>
                             <span class="bg-teal-100 text-teal-800 text-[9px] font-bold px-2 py-0.5 rounded uppercase tracking-wider"></span>
                         </div>
                         <h4 class="text-xs font-extrabold text-slate-400 uppercase tracking-wider mb-2" id="l5-question-category">Inscripción y Permanencia:</h4>
@@ -362,7 +362,7 @@
                         <div class="space-y-2 border-t pt-3">
                             <a href="https://inspt.utn.edu.ar/bienestar-estudiantil/" target="_blank" class="flex items-center gap-2 text-[10px] text-teal-700 hover:text-teal-900 font-bold transition-colors"><span>📅</span> Enlace: Calendario Académico Oficial</a>
                             <div class="flex items-center gap-2 text-[10px] text-slate-500 font-bold"><span>🏢</span> Depto. de Alumnos: Sede Triunvirato</div>
-                        <a href="http://sysacadweb.inspt.utn.edu.ar/sysacadINSPT/loginAlumno.asp?_gl=1*1wc4f08*_gcl_au*OTY5OTE2NDkuMTc4MjIzOTYwOA..*_ga*MTUzMzk5MTA0Ny4xNjY5Mjk3NDQz*_ga_Z8MH5PXFJ8*czE3ODI2NDk2NDEkbzI2MSRnMSR0MTc4MjY0OTY2NSRqMzYkbDAkaDA." target="_blank" class="flex items-center gap-2 text-[10px] text-teal-700 hover:text-teal-900 font-bold transition-colors"><span>🖥️</span> Enlace a SysAcad</a>
+                            <a href="http://sysacadweb.inspt.utn.edu.ar/sysacadINSPT/loginAlumno.asp?_gl=1*1wc4f08*_gcl_au*OTY5OTE2NDkuMTc4MjIzOTYwOA..*_ga*MTUzMzk5MTA0Ny4xNjY5Mjk3NDQz*_ga_Z8MH5PXFJ8*czE3ODI2NDk2NDEkbzI2MSRnMSR0MTc4MjY0OTY2NSRqMzYkbDAkaDA." target="_blank" class="flex items-center gap-2 text-[10px] text-teal-700 hover:text-teal-900 font-bold transition-colors"><span>🖥️</span> Enlace a SysAcad</a>
                         </div>
                     </div>
                     <div class="bg-teal-50 border border-teal-100 p-3.5 rounded-xl mt-4">
@@ -458,7 +458,6 @@
             </div>
         </div>
     </div>
-
     <script>
     const AudioContextClass = window.AudioContext || window.webkitAudioContext;
     let audioCtx = null;
@@ -495,8 +494,8 @@
             correctSequence: ["h-1","h-2","h-3","h-4","h-5"],
             allHitos: {
                 "h-1": { text: "Preinscripción Web Obligatoria", desc: "Completar el formulario digital de preinscripción en la plataforma del INSPT-UTN." },
-                "h-3": { text: "Confirmación de Vacante para Ingreso", desc: "Frente a la presentación de tu documentación en Dpto. Alumnos, la vacante queda formalmente confirmada para iniciar el curso/seminario/taller de ingreso, atendiendo a las vacantes disponibles y a la modalidad de cada carrera. El Profesorado en Docencia Superior no requiere curso de ingreso." },
                 "h-2": { text: "Documentación (en papel)", desc: "Presentar en los períodos establecidos - Sede Triunvirato 3174 -: a) DNI original/copia; b) Título Secundario Legalizado (o constancia de título en trámite) - para el Profesorado en Docencia Superior: título de educación superior. c) Partida de nacimiento. d) Fotos 4x4. e) Constancia de CUIL." },
+                "h-3": { text: "Confirmación de Vacante para Ingreso", desc: "Frente a la presentación de tu documentación en Dpto. Alumnos, la vacante queda formalmente confirmada para iniciar el curso/seminario/taller de ingreso, atendiendo a las vacantes disponibles y a la modalidad de cada carrera. El Profesorado en Docencia Superior no requiere curso de ingreso." },
                 "h-4": { text: "Cursado del Ingreso", desc: "Cursar el Taller, Curso o Seminario de ingreso según cada carrera, con asistencia obligatoria, no inferior al 75%. Consultar en la página web o en el QR el tipo de ingreso por carrera." },
                 "h-5": { text: "Analítico del título pendiente", desc: "En caso de no haber presentado el título, dar cumplimiento a la presentación del mismo, ya sea del secundario o de nivel superior, según la carrera, en los plazos establecidos. El legajo incompleto no permite la aprobación de materias de la carrera." }
             }
@@ -504,8 +503,8 @@
         levelNew: { questions: [
             { statement: "Como ya completé mi formulario de preinscripción en la página web oficial, he terminado de manera definitiva mi trámite de inscripción a la carrera y mi lugar está asegurado.", isTrue: false, feedback: "El trámite de inscripción no termina con la preinscripción web. Es solo el primer paso. El trámite exige presentar la documentación de forma física en el Departamento de Alumnos en los plazos establecidos para poder realizar el ingreso. Las vacantes están sujetas a la disponibilidad de la carrera." },
             { statement: "Haber completado el formulario de preinscripción en línea no me reserva una vacante automática para el curso/taller/seminario de ingreso en las Tecnicaturas y Profesorado de Inglés y de Matemática.", isTrue: true, feedback: "La reserva de vacante no es automática. Un error común es creer que anotarse en la web garantiza la vacante. El aspirante debe saber que la vacante para realizar el curso, taller o seminario de ingreso queda reservada exclusivamente frente a la presentación de la documentación y, además, está supeditada a la disponibilidad de la carrera." },
-            { statement: "Los aspirantes a las Tecnicaturas de Informática, Química, Física y Profesorado de Matemática deben realizar un seminario de ingreso .<br><br> Los aspirantes al Profesorado de Inglés deben realizar un curso de ingreso .<br><br> Los aspirantes a Tecnicaturas de Control Eléctrico, Mecánica, Robótica, Electrónica y Diseño Tecnológico deben realizar talleres de ingreso.<br><br>El Profesorado en Docencia Superior no requiere de ingreso obligatorio.", isTrue: true, feedback: "Los aspirantes a Tecnicatura de Informática, Química y Física y Profesorado de Matemática deben realizar un seminario de ingreso .<br><br> Los aspirantes al Profesorado de Inglés deben realizar un curso de ingreso .<br><br> Los aspirantes a Tecnicaturas de Control Eléctrico, Mecánica, Robótica, Electrónica y Diseño Tecnológico deben realizar talleres de ingreso .<br><br> El Profesorado en Docencia Superior no requiere de ingreso obligatorio." },
-            { statement: "Todos aspirantes a las Tecnicaturas y Profesorados de Inglés y Matemática deben realizar el ingreso todos en la misma fecha.", is false: true, feedback: "Falso. Los aspirantes a Tecnicatura de Informática, Química y Física y Profesorado de Matemática e Inglés disponen de dos períodos (en 2026 y 2027) para realizar el ingreso. Cumpliendo con los requisitos académicos queda reservada su vacante. .<br><br> Los aspirantes a Tecnicaturas de Control Eléctrico, Mecánica, Robótica, Electrónica y Diseño Tecnológico deben realizar talleres de ingreso en marzo .<br><br> Consultar las fechas y requisitos en Tipo de ingreso: https://inspt.utn.edu.ar/inscripcion-a-carreras/." },
+            { statement: "Los aspirantes a las Tecnicaturas de Informática, Química, Física y Profesorado de Matemática deben realizar un seminario de ingreso .<br><br> Los aspirantes al Profesorado de Inglés deben realizar un curso de ingreso .<br><br> Los aspirantes a Tecnicaturas de Control Eléctrico, Mecánica, Robótica, Electrónica y Diseño Tecnológico deben realizar talleres de ingreso.<br><br>El Profesorado en Docencia Superior no requiere de ingreso obligatorio.", isTrue: true, feedback: "Los aspirantes a Tecnicatura de Informática, Química y Física y Profesorado de Matemática deben realizar un seminario de ingreso. Los aspirantes al Profesorado de Inglés deben realizar un curso de ingreso .<br><br> Los aspirantes a Tecnicaturas de Control Eléctrico, Mecánica, Robótica, Electrónica y Diseño Tecnológico deben realizar talleres de ingreso. El Profesorado en Docencia Superior no requiere de ingreso obligatorio." },
+            { statement: "Todos aspirantes a las Tecnicaturas y Profesorados de Inglés y Matemática deben realizar el ingreso todos en la misma fecha.", isTrue: false, feedback: "Falso. Los aspirantes a Tecnicatura de Informática, Química y Física y Profesorado de Matemática e Inglés disponen de dos períodos (en 2026 y 2027) para realizar el ingreso. Cumpliendo con los requisitos académicos queda reservada su vacante. .<br><br> Los aspirantes a Tecnicaturas de Control Eléctrico, Mecánica, Robótica, Electrónica y Diseño Tecnológico deben realizar talleres de ingreso en marzo .<br><br> Consultar las fechas y requisitos en Tipo de ingreso: https://inspt.utn.edu.ar/inscripcion-a-carreras/." },
             { statement: "Dado que los profesorados y tecnicaturas que dicta el INSPT son carreras de carácter no arancelado, las asistencias a los cursos, talleres o seminarios de ingreso son totalmente opcionales.", isTrue: false, feedback: "La asistencia al curso/seminario/talleres de ingreso es obligatoria. Al ser carreras presenciales, el sistema exige obligatoriamente un 75% de asistencia para poder ingresar a la carrera." },
             { statement: "Si me voy a inscribir al Profesorado en Docencia Superior, los requisitos de ingreso son exactamente iguales a los de las tecnicaturas.", isTrue: false, feedback: "¡Excelente detección de casos especiales! Quienes aspiren al Profesorado en Docencia Superior tienen que cumplir un requisito mayor: poseer un título de Educación Superior de al menos 1.800 horas reloj y de dos años y medio de duración, presentando el plan de estudios correspondiente." },
             { statement: "Si presento mi constancia de título secundario en trámite o indico que adeudo materias del secundario, una vez comenzada la cursada podré aprobar formalmente las asignaturas del primer cuatrimestre.", isTrue: false, feedback: "¡Es un gran mito! Hay una restricción académica. Quienes ingresan con constancia de título en trámite, alumno regular o materias adeudadas no podrán aprobar asignaturas de la carrera hasta que no entreguen el título y cumplan todas las condiciones reglamentarias en los plazos establecidos." },
@@ -514,7 +513,7 @@
             { statement: "Al presentar una solicitud para que me reconozcan equivalencias de materias aprobadas en otra institución de educación superior reconocida, dentro de los plazos reglamentarios, no es necesario que empiece a cursar la materia.", isTrue: false, feedback: "El aspirante puede presentar la solicitud de equivalencias dentro de los plazos establecidos por el Calendario Académico (disponible en https://inspt.utn.edu.ar/bienestar-estudiantil/). Sin embargo, hasta que no disponga del dictamen formal aprobatorio, se sugiere que curse la materia solicitada para no quedar libre, en caso de que el dictamen sea desfavorable." }
         ]},
         level3: { scenarios: [
-           { avatarName: "Thiago", avatarIcon: "📊", avatarRole: "Estudiante", avatarFooter: "Reglamento General",
+            { avatarName: "Thiago", avatarIcon: "📊", avatarRole: "Estudiante", avatarFooter: "Reglamento General",
               chapterTitle: "Calificaciones", title: "Calificación",
               description: "Milena fue calificada con un 4 tanto los parciales que rindió en Junio como en mesa de final de Febrero. ¿Cuál es su condición académica de acuerdo al reglamento?",
               options: [
@@ -592,11 +591,11 @@
                 { text: "Aprobación Directa: Requiere 75% de asistencia y aprobar parciales o TP con calificación mínima de OCHO (8) puntos por instancia (con al menos una instancia de recuperación). Aprobación no directa: Calificación de 6 o 7 habilita final con programa analítico completo. Calificación menor a 6 o quedar libre obliga a recursar.", isCorrect: true, feedback: "¡Sobresaliente análisis! La Aprobación directa se obtiene con una nota mínima de 8 puntos en cada evaluación. Calificaciones de 6 o 7 demandan rendir el examen final tradicional." },
                 { text: "Para Aprobación directa se requiere un promedio de 6 entre ambos parciales, no existiendo instancias de recuperación, mientras que notas inferiores a 4 obligan a rendir final obligatorio sobre una sola unidad del programa.", isCorrect: false, feedback: "¡Totalmente erróneo! La Aprobación directa exige nota mínima de 8 en cada evaluación parcial (no promedio), y la no aprobación de exámenes (<6) exige recursar." }
             ]},
-            { category: "Validez temporal de la regularidad", question: " En las Tecnicaturas ¿Cuánto dura la regularidad de una materia?", options: [
+            { category: "Validez temporal de la regularidad", question: "En las Tecnicaturas ¿Cuánto dura la regularidad de una materia?", options: [
                 { text: "En las Tecnicaturas la regularidad de cada materia (cursado aprobado pendiente de final) tendrá una validez de un (1) año", isCorrect: true, feedback: "¡Sobresaliente! La regularidad tendrá una validez de un (1) año." },
                 { text: "En las Tecnicaturas la regularidad de cada materia (cursado aprobado pendiente de final) no se vence", isCorrect: false, feedback: "¡Totalmente erróneo! La regularidad tendrá una validez de un (1) año." }
             ]},
-             { category: "Límite de aplazos en finales", question: "¿Cuántas veces se puede rendir mal un final?", options: [
+            { category: "Límite de aplazos en finales", question: "¿Cuántas veces se puede rendir mal un final?", options: [
                 { text: "Si un alumno obtiene calificación insuficiente (menor a 6 puntos) en un final, puede volver a darlo todas la veces que necesite", isCorrect: false, feedback: "¡Sobresaliente análisis! La Aprobación directa se obtiene con una nota mínima de 8 puntos en cada evaluación. Calificaciones de 6 o 7 demandan rendir el examen final tradicional." },
                 { text: "Si un alumno obtiene calificación insuficiente (menor a 6 puntos) en cuatro (4) evaluaciones finales de una misma materia, pierde la regularidad y debe recursarla obligatoriamente", isCorrect: true, feedback: "¡Totalmente erróneo! La Aprobación directa exige nota mínima de 8 en cada evaluación parcial (no promedio), y la no aprobación de exámenes (<6) exige recursar." }
             ]},
